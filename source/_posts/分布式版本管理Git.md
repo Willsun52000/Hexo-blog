@@ -5,12 +5,12 @@ Git是一个开源的分布式版本控制系统，可以有效、高速的处�
 本节不是Git的教程，而是介绍一下项目中Git的分支策略以及流程管理，同时也涉及一种广泛应用的商用Git工具BitBucket，顺便也会涉及一些代码托管Github以及这两年开始流行的Gitlab的使用方法，当然Github与Gitlab已不单单是版本控制，也包括后文将会提到的知识管理和持续集成。
 [Git使用教程](http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000)
 上一张比较经典的分支策略的图，涵盖版本发布，新Sprint开发，bug fix。
-![Alt text](./branches.png)
+![Alt text](./css/images/branches.png)
 ### 分布式而非集中式
-![Alt text](./distributed.png)
+![Alt text](./css/images/distributed.png)
 对于这种分支模型，我们设置了一个版本库称为原始库（origin）。每个开发者都对原始库（origin）库拉取（pull）代码和推送（push）代码。但是除了集中式的存取代码关系，每个开发者也可以从子团队的其他队友那里获得代码版本变更。例如，对于2个或多个开发者一起完成的大版本变更，为了防止过早地向origin库提交工作内容，这种机制就变得非常有用。在上述途中，有如下子团队：Alice和Bob，Alice和David，Clair和David。从技术上将，这意味着，Alice创建了一个Git的远程节点，而对于Bob，该节点指向了Bob的版本库，反之亦然。
 ### 主分支
-![Alt text](./main.png)
+![Alt text](./css/images/main.png)
 中心库有2个分支（branch）：
 - master分支
 - develop分支
@@ -26,7 +26,7 @@ Git是一个开源的分布式版本控制系统，可以有效、高速的处�
 每一种分支有一个特定目的，并且受限于严格到规则，比如：可以用哪些分支作为源分支，哪些分支能作为合并目标。我们马上将进行演练。
 从技术角度来看，这些分支绝不是特殊分支。分支的类型基于我们使用的方法来进行分类。它们理所当然是普通的Git分支。
 ###功能分支（feature）
-![Alt text](./feature.png)
+![Alt text](./css/images/feature.png)
 可能是develop分支的分支版本，最终必须合并到develop分支中。
 分支命名规则：除了master、develop、release-*或者hotfix-*之外，其他命名均可。
 feature分支通常为即将发布或者未来发布版开发新的功能。当新功能开始研发，包含该功能的发布版本在这时还是无法确定发布时间的。feature版本的实质是只要这个功能处于开发状态它就会存在，但是最终会合并到develop分支或取消。功能分支通常存在于开发者的软件库，而不是在源代码库中。
@@ -49,7 +49,7 @@ Deleted branch myfeature (was 05e9557).
 $ git push origin develop
 ```
 --no-ff标志导致合并操作创建一个新commit对象，即使该合并操作可以fast-forward。这避免了丢失这个功能分支存在的历史信息，将该功能的所有提交组合在一起。 比较:
-![Alt text](./merge.png)
+![Alt text](./css/images/merge.png)
 后一种情况，不可能从Git历史中看到哪些提交一起实现了一个功能，你必须手工阅读全部的日志信息。如果对整个功能进行回退 (比如一组提交)，后一种方式会是一种真正头痛的问题，而使用--no-ff的情况则很容易。
 ### Release 分支
 Release分支可能从develop分支分离而来，但是一定要合并到develop和master分支上，它的习惯命名方式为：release-*。
@@ -94,7 +94,7 @@ $ git branch -d release-1.2
 Deleted branch release-1.2 (was ff452fe).
 ```
 ### 热修复分支
-![Alt text](./hotfix.png)
+![Alt text](./css/images/hotfix.png)
 可以基于master分支，必须合并回develop和master分支。
 分支名约定：hotfix-*
 热修复分支与发布分支很相似，他们都为新的生成环境发布做准备，尽管这是未经计划的。他们来自生产环境的处于异常状态压力。当生成环境验证缺陷必须马上修复是，热修复分支可以基于master分支上对应与线上版本的tag创建。
