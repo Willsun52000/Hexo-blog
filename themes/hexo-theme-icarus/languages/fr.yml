@@ -22,7 +22,7 @@ article:
     share: 'Partager'
     catalogue: 'Catalogue'
 profile:
-    follow: 'SUIVRE'
+    follow: '关注我'
     post: 'Article'
     tag: 'Tag'
     posts: 'Articles'
