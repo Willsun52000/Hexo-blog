@@ -25,10 +25,12 @@ customize:
     favicon: # path to favicon
     social_links:
         github: http://github.com/ppoffice/hexo-theme-icarus
-        twitter: /
-        facebook: /
-        dribbble: /
-        rss: /
+        weibo: http://www.weibo.com/u/1915961771
+        envelope: mailto:willsun5_2000@aliyun.com
+        #twitter: /
+        #facebook: /
+        #dribbble: /
+        #rss: /
     social_link_tooltip: true # enable the social link tooltip, options: true, false
 
 # Widgets
@@ -53,7 +55,7 @@ comment:
     youyan: # enter youyan uid here
 
 # Share
-share: default # options: jiathis, bdshare, addtoany, default
+share: bdshare # options: jiathis, bdshare, addtoany, default
 
 # Plugins
 plugins:
