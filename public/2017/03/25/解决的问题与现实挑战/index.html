@@ -3,15 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>about | 温青 | 博客</title>
+    <title>解决的问题与现实挑战 | 温青 | 博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+    <meta name="description" content="严格意义上讲微服务并不是一种全新的架构模式，从发展轨迹上来看，它更像是基于SOA体系架构加上一些最佳实践，幻化出来的新变种。微服务摒弃了SOA中以ESB为中心的思想，服务粒度大小适中（粒度划分会在敏捷开发章节详细论述），采用轻量级的通信协议，吸收了敏捷开发方法论的核心思想和一系列成熟的平台工具和开发规范。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解决的问题与现实挑战">
+<meta property="og:url" content="http://yoursite.com/2017/03/25/解决的问题与现实挑战/index.html">
 <meta property="og:site_name" content="温青 | 博客">
-<meta property="og:updated_time" content="2017-03-23T13:50:38.000Z">
+<meta property="og:description" content="严格意义上讲微服务并不是一种全新的架构模式，从发展轨迹上来看，它更像是基于SOA体系架构加上一些最佳实践，幻化出来的新变种。微服务摒弃了SOA中以ESB为中心的思想，服务粒度大小适中（粒度划分会在敏捷开发章节详细论述），采用轻量级的通信协议，吸收了敏捷开发方法论的核心思想和一系列成熟的平台工具和开发规范。">
+<meta property="og:updated_time" content="2017-03-27T14:45:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="解决的问题与现实挑战">
+<meta name="twitter:description" content="严格意义上讲微服务并不是一种全新的架构模式，从发展轨迹上来看，它更像是基于SOA体系架构加上一些最佳实践，幻化出来的新变种。微服务摒弃了SOA中以ESB为中心的思想，服务粒度大小适中（粒度划分会在敏捷开发章节详细论述），采用轻量级的通信协议，吸收了敏捷开发方法论的核心思想和一系列成熟的平台工具和开发规范。">
     
 
     
@@ -182,7 +185,7 @@
 </aside>
 
             
-            <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+            <section id="main"><article id="post-解决的问题与现实挑战" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
         
@@ -190,10 +193,34 @@
                 
     
         <h1 class="article-title" itemprop="name">
-            本人81生人，05年硕士毕业后参加工作，大学期间做过那种前后台混成一堆的web应用和单机APP，工作后先接触J2EE企业级开发，做过前段，后端服务，中间件，数据库开发。后来有机会进入大厂从事系统集成SOA，分布式架构设计和开发，也有幸投身于开源社区活动。虽身在传统行业，但也对互联网行业技术架构和运营模式有所了解。希望能通过本书现身说法，给读者以启发。
+            解决的问题与现实挑战
         </h1>
     
 
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/03/25/解决的问题与现实挑战/">
+            <time datetime="2017-03-25T13:25:41.000Z" itemprop="datePublished">2017-03-25</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/microservice/">微服务</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/入门基础/">入门基础</a>
+    </div>
+
+                    </div>
                 
             </header>
         
@@ -201,7 +228,23 @@
         <div class="article-entry" itemprop="articleBody">
         
             
-            
+            <p>严格意义上讲微服务并不是一种全新的架构模式，从发展轨迹上来看，它更像是基于SOA体系架构加上一些最佳实践，幻化出来的新变种。微服务摒弃了SOA中以ESB为中心的思想，服务粒度大小适中（粒度划分会在敏捷开发章节详细论述），采用轻量级的通信协议，吸收了敏捷开发方法论的核心思想和一系列成熟的平台工具和开发规范。<br><a id="more"></a><br>下面的表格展示了微服务与SOA的区别<br>| 微服务      |    SOA |<br>| :——– | :——–|<br>| 使用大量小组件  |     存在各别较复杂的组件 |<br>| 业务逻辑存在于单独的服务领域中     |   业务逻辑可以跨多个领域存在 |<br>| 使用简单的连接协议，例如HTTP与XML或JSON      |    企业服务产总线（ESB）充当了服务之间的层的角色 |<br>| 通过SDK与客户端连接API      |    使用中间件 |<br>微服务的一些优势是显而易见的：</p>
+<ul>
+<li>每个服务都很简单，只关注于一个业务功能。在功能不变的情况下，应用被分解为多个可管理的分支或服务。每个服务都有一个用RPC-或者消息驱动API定义清楚的边界。微服务架构模式给采用单体式编码方式很难实现的功能提供了模块化的解决方案，由此，单个服务很容易开发、理解和维护。</li>
+<li>每个微服务可以由不同的团队独立开发。这种架构使得每个服务都可以有专门开发团队来开发。开发者可以自由选择开发技术，提供API服务。当然，许多公司试图避免混乱，只提供某些技术选择。然后，这种自由意味着开发者不需要被迫使用某项目开始时采用的过时技术，他们可以选择现在的技术。甚至于，因为服务都是相对简单，即使用现在技术重写以前代码也不是很困难的事情。</li>
+<li>微服务是松散耦合的。微服务架构模式是每个微服务独立的部署。开发者不再需要协调其它服务部署对本服务的影响。这种改变可以加快部署速度。UI团队可以采用AB测试，快速的部署变化。微服务架构模式使得持续化部署成为可能。</li>
+<li>微服务可以通过不同的编程语言与工具进行开发。微服务架构模式使得每个服务独立扩展。你可以根据每个服务的规模来部署满足需求的规模。甚至于，你可以使用更适合于服务资源需求的硬件。比如，你可以在EC2 Compute Optimized instances上部署CPU敏感的服务，而在EC2 memory-optimized instances上部署内存数据库。</li>
+</ul>
+<p>这些优势使得微服务看起来是非常完美的解决方案，不过微服务难道就没有缺点么？</p>
+<ul>
+<li>运维成本过高。微服务强调服务粒度，将原有功能或服务拆分成耦合度低的服务组，这就需要对服务组中各个服务单独运维，增加了运维的难度。</li>
+<li>CICD是必须的。敏捷开发的引入要求服务的迭代速度前所未有的加快了，以适应瞬息万变的市场，这就导致了再开发耗时之外，不得不频繁的合并提交，部署上线，这在过去单靠人肉的时代是无法完成的任务，因此CICD是保证迭代顺利完成的关键。</li>
+<li>接口不匹配。由于微服务间是以松耦合的契约规定服务调用方式的，服务方如果没有及时通知调用方接口的变化，会造成服务的调用的失败，甚至影响上线。</li>
+<li>代码重复。为了避免将“同步耦合引入到系统中”，有时需要向不同服务添加一些代码，这就会导致代码重复，而代码重复是非常不好的，因为每个代码实例都需要进行测试和维护。一种解决方案是在服务间使用共享库，不过在多语言环境下这就行不通了，而且引入了耦合就意味着服务需要并行发布来维护彼此间的隐式接口。</li>
+<li>分布式系统，异步的复杂性。分布式在微服务中的引入，在降低架构复杂度，解耦服务调用关系的同时，也带来了网络延迟，调用不确定性，分布式事务控制等一系列新挑战。</li>
+<li>测试一个基于微服务架构的应用也是很复杂的任务。不只需要为每个服务建立基本的单体测试，还需要为了验证服务调用关系建立端到端的测试用例，在集成测试阶段还需要人工测试的同时尽可能多的用自动化测试化脚本覆盖到所有业务用例，这样才能尽可能保证快速迭代中，每次回归测试的自动化，降低迭代过程的测试成本。</li>
+</ul>
+
         
         </div>
         <footer class="article-footer">
@@ -248,13 +291,32 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
 
             
     
-        <a href="http://yoursite.com/about/index.html#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/about/index.html">评论</a>
+        <a href="http://yoursite.com/2017/03/25/解决的问题与现实挑战/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/03/25/解决的问题与现实挑战/">评论</a>
     
 
         </footer>
     </div>
     
         
+<nav id="article-nav">
+    
+        <a href="/2017/03/25/分布式版本管理Git/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    分布式版本管理
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2017/03/24/前言/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">前言</div>
+        </a>
+    
+</nav>
+
 
     
 </article>
@@ -270,7 +332,7 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     </div>
     -->
     <!--高速版，加载速度快，使用前需测试页面的兼容性-->
-    <div id="SOHUCS" sid="about"></div>
+    <div id="SOHUCS" sid="解决的问题与现实挑战"></div>
     <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
     <script type="text/javascript">
         window.changyan.api.config({
@@ -357,9 +419,9 @@ window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMin
     <script>
     var disqus_config = function () {
         
-            this.page.url = 'http://yoursite.com/about/index.html';
+            this.page.url = 'http://yoursite.com/2017/03/25/解决的问题与现实挑战/';
         
-        this.page.identifier = 'undefined';
+        this.page.identifier = '解决的问题与现实挑战';
     };
     (function() { 
         var d = document, s = d.createElement('script');  

@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <meta charset="utf-8">
+    
+    <title>分布式版本管理 | 温青 | 博客</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分布式版本管理">
+<meta property="og:url" content="http://yoursite.com/2017/03/25/分布式版本管理Git/index.html">
+<meta property="og:site_name" content="温青 | 博客">
+<meta property="og:description" content="Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。">
+<meta property="og:image" content="http://yoursite.com/css/images/branches.png">
+<meta property="og:image" content="http://yoursite.com/css/images/distributed.png">
+<meta property="og:image" content="http://yoursite.com/css/images/main.png">
+<meta property="og:image" content="http://yoursite.com/css/images/feature.png">
+<meta property="og:image" content="http://yoursite.com/css/images/merge.png">
+<meta property="og:image" content="http://yoursite.com/css/images/hotfix.png">
+<meta property="og:updated_time" content="2017-03-27T14:46:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="分布式版本管理">
+<meta name="twitter:description" content="Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。">
+<meta name="twitter:image" content="http://yoursite.com/css/images/branches.png">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/vendor/open-sans/styles.css">
+    <link rel="stylesheet" href="/vendor/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/vendor/jquery/2.1.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/vendor/lightgallery/css/lightgallery.min.css">
+    
+    
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+    <div id="header-main" class="header-inner">
+        <div class="outer">
+            <a href="/" id="logo">
+                <i class="logo"></i>
+                <span class="site-title">温青 | 博客</span>
+            </a>
+            <nav id="main-nav">
+                
+                    <a class="main-nav-link" href="/.">主页</a>
+                
+                    <a class="main-nav-link" href="/archives">目录</a>
+                
+                    <a class="main-nav-link" href="/about">关于</a>
+                
+            </nav>
+            
+                
+                <nav id="sub-nav">
+                    <div class="profile" id="profile-nav">
+                        <a id="profile-anchor" href="javascript:;">
+                            <img class="avatar" src="/css/images/avatar.png" />
+                            <i class="fa fa-caret-down"></i>
+                        </a>
+                    </div>
+                </nav>
+            
+            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+        </div>
+    </div>
+    <div id="main-nav-mobile" class="header-sub header-inner">
+        <table class="menu outer">
+            <tr>
+                
+                    <td><a class="main-nav-link" href="/.">主页</a></td>
+                
+                    <td><a class="main-nav-link" href="/archives">目录</a></td>
+                
+                    <td><a class="main-nav-link" href="/about">关于</a></td>
+                
+                <td>
+                    
+    <div class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+    </div>
+
+                </td>
+            </tr>
+        </table>
+    </div>
+</header>
+
+        <div class="outer">
+            
+                
+
+<aside id="profile">
+    <div class="inner profile-inner">
+        <div class="base-info profile-block">
+            <img id="avatar" src="/css/images/avatar.png" />
+            <h2 id="name">孙如意</h2>
+            <h3 id="title">金融领域系统架构和开发，做过传统J2EE，SOA，分布式系统，熟悉前端，后端，中间件，数据库，目标全栈加架构。懂互联网，愿意交流与分享。</h3>
+            <span id="location"><i class="fa fa-map-marker"></i>大连, 中国</span>
+            <a id="follow" target="_blank" href="https://github.com/Willsun52000/">关注我</a>
+        </div>
+        <div class="article-info profile-block">
+            <div class="article-info-block">
+                4
+                <span>文章</span>
+            </div>
+            <div class="article-info-block">
+                2
+                <span>标签</span>
+            </div>
+        </div>
+        
+        <div class="profile-block social-links">
+            <table>
+                <tr>
+                    
+                    
+                    <td>
+                        <a href="http://github.com/ppoffice/hexo-theme-icarus" target="_blank" title="github" class=tooltip>
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="http://www.weibo.com/u/1915961771" target="_blank" title="weibo" class=tooltip>
+                            <i class="fa fa-weibo"></i>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <a href="mailto:willsun5_2000@aliyun.com" target="_blank" title="envelope" class=tooltip>
+                            <i class="fa fa-envelope"></i>
+                        </a>
+                    </td>
+                    
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+</aside>
+
+            
+            <section id="main"><article id="post-分布式版本管理Git" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+            分布式版本管理
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/03/25/分布式版本管理Git/">
+            <time datetime="2017-03-25T13:41:54.000Z" itemprop="datePublished">2017-03-25</time>
+        </a>
+    </div>
+
+
+                        
+    <div class="article-category">
+    	<i class="fa fa-folder"></i>
+        <a class="article-category-link" href="/categories/microservice/">微服务</a>
+    </div>
+
+                        
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/基础流程框架/">基础流程框架</a>
+    </div>
+
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <blockquote>
+<p>Git是一款免费、开源的分布式版本控制系统，用于敏捷高效地处理任何或小或大的项目。<br>Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linus Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。</p>
+</blockquote>
+<a id="more"></a>
+<p>本节不是Git的教程，而是介绍一下项目中Git的分支策略以及流程管理，同时也涉及一种广泛应用的商用Git工具BitBucket，顺便也会涉及一些代码托管Github以及这两年开始流行的Gitlab的使用方法，当然Github与Gitlab已不单单是版本控制，也包括后文将会提到的知识管理和持续集成。<br><a href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000" target="_blank" rel="external">Git使用教程</a><br>上一张比较经典的分支策略的图，涵盖版本发布，新Sprint开发，bug fix。<br><img src="/css/images/branches.png" alt="Alt text"></p>
+<h3 id="分布式而非集中式"><a href="#分布式而非集中式" class="headerlink" title="分布式而非集中式"></a>分布式而非集中式</h3><p><img src="/css/images/distributed.png" alt="Alt text"><br>对于这种分支模型，我们设置了一个版本库称为原始库（origin）。每个开发者都对原始库（origin）库拉取（pull）代码和推送（push）代码。但是除了集中式的存取代码关系，每个开发者也可以从子团队的其他队友那里获得代码版本变更。例如，对于2个或多个开发者一起完成的大版本变更，为了防止过早地向origin库提交工作内容，这种机制就变得非常有用。在上述途中，有如下子团队：Alice和Bob，Alice和David，Clair和David。从技术上将，这意味着，Alice创建了一个Git的远程节点，而对于Bob，该节点指向了Bob的版本库，反之亦然。</p>
+<h3 id="主分支"><a href="#主分支" class="headerlink" title="主分支"></a>主分支</h3><p><img src="/css/images/main.png" alt="Alt text"><br>中心库有2个分支（branch）：</p>
+<ul>
+<li>master分支</li>
+<li>develop分支</li>
+</ul>
+<p>每个Git用户都要熟悉原始的master分支。与master分支并行的另一个分支，我们称之为develop分支。我们把origin/master库认作为主分支，HEAD默认指向master。我们把origin/develop库认为是主分支，该分支HEAD默认指向develop。当develop分支的源码到达了一个稳定状态待发布，所有的代码变更需要以某种方式合并到master分支，然后标记一个版本号。如何操作将在稍后详细介绍。所以，每次变更都合并到了master，这就是新产品的定义，并为之打上标签（tag）。</p>
+<p>###辅助性分支<br>我们的开发模型使用了各种辅助性分支，这些分支与关键分支（master和develop）一起，用来支持团队成员们并行开发，使得易于追踪功能，协助生产发布环境准备，以及快速修复实时在线问题。与关键分支不同，这些分支总是有一个有限的生命期，因为他们最终会被移除。<br>我们用到的分支类型包括：</p>
+<ul>
+<li>功能分支</li>
+<li>发布分支</li>
+<li>热修复分支</li>
+</ul>
+<p>每一种分支有一个特定目的，并且受限于严格到规则，比如：可以用哪些分支作为源分支，哪些分支能作为合并目标。我们马上将进行演练。<br>从技术角度来看，这些分支绝不是特殊分支。分支的类型基于我们使用的方法来进行分类。它们理所当然是普通的Git分支。</p>
+<p>###功能分支（feature）<br><img src="/css/images/feature.png" alt="Alt text"><br>可能是develop分支的分支版本，最终必须合并到develop分支中。<br>分支命名规则：除了master、develop、release-<em>或者hotfix-</em>之外，其他命名均可。<br>feature分支通常为即将发布或者未来发布版开发新的功能。当新功能开始研发，包含该功能的发布版本在这时还是无法确定发布时间的。feature版本的实质是只要这个功能处于开发状态它就会存在，但是最终会合并到develop分支或取消。功能分支通常存在于开发者的软件库，而不是在源代码库中。</p>
+<h3 id="创建一个功能分支"><a href="#创建一个功能分支" class="headerlink" title="创建一个功能分支"></a>创建一个功能分支</h3><p>开始一项功能的开发工作时，基于develop创建分支。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b myfeature develop</div><div class="line">Switched to a new branch &quot;myfeature&quot;</div></pre></td></tr></table></figure></p>
+<h3 id="合并一个功能到develop分支"><a href="#合并一个功能到develop分支" class="headerlink" title="合并一个功能到develop分支"></a>合并一个功能到develop分支</h3><p>完成的功能可以合并进develop分支，以明确加入到未来的发布：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ git checkout develop</div><div class="line">Switched to branch &apos;develop&apos;</div><div class="line">$ git merge --no-ff myfeature</div><div class="line">Updating ea1b82a..05e9557</div><div class="line">(Summary of changes)</div><div class="line">$ git branch -d myfeature</div><div class="line">Deleted branch myfeature (was 05e9557).</div><div class="line">$ git push origin develop</div></pre></td></tr></table></figure></p>
+<p>–no-ff标志导致合并操作创建一个新commit对象，即使该合并操作可以fast-forward。这避免了丢失这个功能分支存在的历史信息，将该功能的所有提交组合在一起。 比较:<br><img src="/css/images/merge.png" alt="Alt text"><br>后一种情况，不可能从Git历史中看到哪些提交一起实现了一个功能，你必须手工阅读全部的日志信息。如果对整个功能进行回退 (比如一组提交)，后一种方式会是一种真正头痛的问题，而使用–no-ff的情况则很容易。</p>
+<h3 id="Release-分支"><a href="#Release-分支" class="headerlink" title="Release 分支"></a>Release 分支</h3><p>Release分支可能从develop分支分离而来，但是一定要合并到develop和master分支上，它的习惯命名方式为：release-*。<br>Release分支是为新产品的发布做准备的。它允许我们在最后时刻做一些细小的修改。他们允许小bugs的修改和准备发布元数据（版本号，开发时间等等）。<br>从develop分支创建新的Release分支的关键时刻是develop分支达到了发布的理想状态。至少所有这次要发布的features必须在这个点及时合并到develop分支。对于所有未来准备发布的features必须等到Release分支创建以后再合并。<br>在Release分支创建的时候要为即将发行版本分配一个版本号。直到那时，develop分支反映的变化都是为了下一个发行版，但是在Release分支创建之前，下一个发行版到底叫0.3还是1.0是不明确的。这个决定是在Release分支创建时根据项目在版本号上的规则制定的。</p>
+<h4 id="创建一个release分支"><a href="#创建一个release分支" class="headerlink" title="创建一个release分支"></a>创建一个release分支</h4><p>Release分支是从develop分支创建的。例如，当前产品的发行版本号为1.1.5，同时我们有一个大的版本即将发行。develop 分支已经为下次发行做好了准备，我们得决定下一个版本是1.2（而不是1.1.6或者2.0）。所以我们将Release分支分离出来，给一个能够反映新版本号的分支名。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b release-1.2 develop</div><div class="line">Switched to a new branch &quot;release-1.2&quot;</div><div class="line">$ ./bump-version.sh 1.2</div><div class="line">Files modified successfully, version bumped to 1.2.</div><div class="line">$ git commit -a -m &quot;Bumped version number to 1.2&quot;</div><div class="line">[release-1.2 74d9424] Bumped version number to 1.2</div><div class="line">1 files changed, 1 insertions(+), 1 deletions(-)</div></pre></td></tr></table></figure></p>
+<p>创建新分支以后，切换到该分支，添加版本号。这里，bump-version.sh 是一个虚构的shell脚本，它可以复制一些文件来反映新的版本（这当然可以手动改变–目的就是修改一些文件）。然后版本号被提交。<br>这个新分支可能会存在一段时间，直到该发行版到达它的预定目标。在此期间，bug的修复可能被提交到该分支上（而不是提交到develop分支上）。在这里严格禁止增加大的新features。他们必须合并到develop分支上，然后等待下一次大的发行版。</p>
+<h4 id="完成一个release分支"><a href="#完成一个release分支" class="headerlink" title="完成一个release分支"></a>完成一个release分支</h4><p>当一个release分支准备好成为一个真正的发行版的时候，有一些工作必须完成。首先，release分支要合并到master上（因为每一次提交到master上的都是一个新定义的发行版，记住）。然后，提交到master上必须打一个标签，以便以后更加方便的引用这个历史版本。最后，在release分支上的修改必须合并到develop分支上，以便未来发行版也包含这些bugs的修复。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git checkout master</div><div class="line">Switched to branch &apos;master&apos;</div><div class="line">$ git merge --no-ff release-1.2</div><div class="line">Merge made by recursive.</div><div class="line">(Summary of changes)</div><div class="line">$ git tag -a 1.2</div></pre></td></tr></table></figure></p>
+<p>为了是修改保持在release分支上，我们需要合并这些到develop分支上去。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git checkout develop</div><div class="line">Switched to branch &apos;develop&apos;</div><div class="line">$ git merge --no-ff release-1.2</div><div class="line">Merge made by recursive.</div><div class="line">(Summary of changes)</div></pre></td></tr></table></figure></p>
+<p>这个步骤可能会导致合并冲突（可能由于改变版本号更是如此）。如果是这样，修复它然后提交。<br>现在我们真正的完成了，这个release分支将被删除，因为我们不再需要它了。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git branch -d release-1.2</div><div class="line">Deleted branch release-1.2 (was ff452fe).</div></pre></td></tr></table></figure></p>
+<h3 id="热修复分支"><a href="#热修复分支" class="headerlink" title="热修复分支"></a>热修复分支</h3><p><img src="/css/images/hotfix.png" alt="Alt text"><br>可以基于master分支，必须合并回develop和master分支。<br>分支名约定：hotfix-*<br>热修复分支与发布分支很相似，他们都为新的生成环境发布做准备，尽管这是未经计划的。他们来自生产环境的处于异常状态压力。当生成环境验证缺陷必须马上修复是，热修复分支可以基于master分支上对应与线上版本的tag创建。<br>其本质是团队成员（在develop分支上）的工作可以继续，而另一个人准备生产环境的快速修复。</p>
+<h4 id="创建修补bug分支"><a href="#创建修补bug分支" class="headerlink" title="创建修补bug分支"></a>创建修补bug分支</h4><p>hotfix branch（修补bug分支）是从Master分支上面分出来的。例如，1.2版本是当前生产环境的版本并且有bug。但是开发分支（develop）变化还不稳定。我们需要分出来一个修补bug分支（hotfix branch）来解决这种情况。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ git checkout -b hotfix-1.2.1 master</div><div class="line">Switched to a new branch &quot;hotfix-1.2.1&quot;</div><div class="line">$ ./bump-version.sh 1.2.1</div><div class="line">Files modified successfully, version bumped to 1.2.1.</div><div class="line">$ git commit -a -m &quot;Bumped version number to 1.2.1&quot;</div><div class="line">[hotfix-1.2.1 41e61bb] Bumped version number to 1.2.1</div><div class="line">1 files changed, 1 insertions(+), 1 deletions(-)</div></pre></td></tr></table></figure></p>
+<p>分支关闭的时侯不要忘了更新版本号(bump the version)<br>然后，修复bug，一次提交或者多次分开提交。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ git commit -m &quot;Fixed severe production problem&quot;</div><div class="line">[hotfix-1.2.1 abbe5d6] Fixed severe production problem</div><div class="line">5 files changed, 32 insertions(+), 17 deletions(-)</div></pre></td></tr></table></figure></p>
+<h4 id="完成一个hotfix分支"><a href="#完成一个hotfix分支" class="headerlink" title="完成一个hotfix分支"></a>完成一个hotfix分支</h4><p>完成一个bugfix之后，需要把bugfix合并到master和develop分支去，这样就可以保证修复的这个bug也包含到下一个发行版中。这一点和完成release分支很相似。<br>首先，更新master并对release打上tag：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ git checkout master</div><div class="line">Switched to branch &apos;master&apos;</div><div class="line">$ git merge --no-ff hotfix-1.2.1</div><div class="line">Merge made by recursive.</div><div class="line">(Summary of changes)</div><div class="line">$ git tag -a 1.2.1</div></pre></td></tr></table></figure></p>
+<p>下一步，把bugfix添加到develop分支中：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ git checkout develop</div><div class="line">Switched to branch &apos;develop&apos;</div><div class="line">$ git merge --no-ff hotfix-1.2.1</div><div class="line">Merge made by recursive.</div><div class="line">(Summary of changes)</div></pre></td></tr></table></figure></p>
+<p>规则的一个例外是： 如果一个release分支已经存在，那么应该把hotfix合并到这个release分支，而不是合并到develop分支。当release分支完成后， 将bugfix分支合并回release分支也会使得bugfix被合并到develop分支。（如果在develop分支的工作急需这个bugfix，等不到release分支的完成，那你也可以把bugfix合并到develop分支）<br>最后，删除临时分支：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ git branch -d hotfix-1.2.1</div><div class="line">Deleted branch hotfix-1.2.1 (was abbe5d6).</div></pre></td></tr></table></figure></p>
+
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
+</div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+</div>
+
+            
+    
+        <a href="http://yoursite.com/2017/03/25/分布式版本管理Git/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/03/25/分布式版本管理Git/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2017/03/26/微服务概念/" id="article-nav-newer" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">上一篇</strong>
+            <div class="article-nav-title">
+                
+                    微服务概念
+                
+            </div>
+        </a>
+    
+    
+        <a href="/2017/03/25/解决的问题与现实挑战/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">解决的问题与现实挑战</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <!--
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    -->
+    <!--高速版，加载速度快，使用前需测试页面的兼容性-->
+    <div id="SOHUCS" sid="分布式版本管理"></div>
+    <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+    <script type="text/javascript">
+        window.changyan.api.config({
+        appid: 'cysUMziLi',
+        conf: 'prod_2b37c77132b01eb7f088b433611aeafb'
+        });
+    </script>
+
+    
+    </section>
+
+</section>
+            
+                <aside id="sidebar">
+   
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/microservice/">微服务</a><span class="category-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">4</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/入门基础/">入门基础</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/基础流程框架/">基础流程框架</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/入门基础/" style="font-size: 20px;">入门基础</a> <a href="/tags/基础流程框架/" style="font-size: 10px;">基础流程框架</a>
+        </div>
+    </div>
+
+    
+        
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://www.sunruyi.com:1337">大连内推招聘</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+            
+        </div>
+        <footer id="footer">
+    <div class="outer">
+        <div id="footer-info" class="inner">
+            &copy; 2017 温青 | 博客 - 孙如意 版权所有 辽ICP备16018228号-1<br>
+            <!--
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>
+            -->
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_config = function () {
+        
+            this.page.url = 'http://yoursite.com/2017/03/25/分布式版本管理Git/';
+        
+        this.page.identifier = '分布式版本管理Git';
+    };
+    (function() { 
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+
+
+    
+        <script src="/vendor/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-share.min.js"></script>
+        <script src="/vendor/lightgallery/js/lg-video.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>

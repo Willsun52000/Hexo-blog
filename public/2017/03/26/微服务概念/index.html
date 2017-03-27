@@ -3,14 +3,20 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档: 2017 | 温青 | 博客</title>
+    <title>微服务概念 | 温青 | 博客</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta property="og:type" content="website">
-<meta property="og:title" content="温青 | 博客">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+    <meta name="description" content="Martin Fowler是国际著名的OO专家，敏捷开发方法的创始人之一，现为ThoughtWorks公司的首席科学家.福勒（Martin Fowler），在面向对象分析设计、UML、模式、软件开发方法学、XP、重构等方面，都是世界顶级的专家，现为Thought Works公司的首席科学家。Thought Works是一家从事企业应用开发和集成的公司。早在20世纪80年代，Fowler就是使用对">
+<meta property="og:type" content="article">
+<meta property="og:title" content="微服务概念">
+<meta property="og:url" content="http://yoursite.com/2017/03/26/微服务概念/index.html">
 <meta property="og:site_name" content="温青 | 博客">
+<meta property="og:description" content="Martin Fowler是国际著名的OO专家，敏捷开发方法的创始人之一，现为ThoughtWorks公司的首席科学家.福勒（Martin Fowler），在面向对象分析设计、UML、模式、软件开发方法学、XP、重构等方面，都是世界顶级的专家，现为Thought Works公司的首席科学家。Thought Works是一家从事企业应用开发和集成的公司。早在20世纪80年代，Fowler就是使用对">
+<meta property="og:image" content="http://yoursite.com/css/images/sketch.png">
+<meta property="og:updated_time" content="2017-03-27T14:44:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="温青 | 博客">
+<meta name="twitter:title" content="微服务概念">
+<meta name="twitter:description" content="Martin Fowler是国际著名的OO专家，敏捷开发方法的创始人之一，现为ThoughtWorks公司的首席科学家.福勒（Martin Fowler），在面向对象分析设计、UML、模式、软件开发方法学、XP、重构等方面，都是世界顶级的专家，现为Thought Works公司的首席科学家。Thought Works是一家从事企业应用开发和集成的公司。早在20世纪80年代，Fowler就是使用对">
+<meta name="twitter:image" content="http://yoursite.com/css/images/sketch.png">
     
 
     
@@ -181,25 +187,21 @@
 </aside>
 
             
-            <section id="main"><div class="timeline timeline-wrap">
-    
-            <div class="timeline-row timeline-row-major">
-                <span class="node"><i class="fa fa-calendar"></i></span>
-                <h1 class="title">2017</h1>
-            </div>
+            <section id="main"><article id="post-微服务概念" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+        
+            <header class="article-header">
                 
     
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/03/26/微服务概念/">微服务概念</a>
+        <h1 class="article-title" itemprop="name">
+            微服务概念
         </h1>
     
 
-                <div class="article-meta">
-                    
+                
+                    <div class="article-meta">
+                        
     <div class="article-date">
         <i class="fa fa-calendar"></i>
         <a href="/2017/03/26/微服务概念/">
@@ -208,131 +210,122 @@
     </div>
 
 
-                    
+                        
     <div class="article-category">
     	<i class="fa fa-folder"></i>
         <a class="article-category-link" href="/categories/microservice/">微服务</a>
     </div>
 
-                    
+                        
     <div class="article-tag">
         <i class="fa fa-tag"></i>
         <a class="tag-link" href="/tags/入门基础/">入门基础</a>
     </div>
 
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
+                    </div>
                 
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/03/25/分布式版本管理Git/">分布式版本管理</a>
-        </h1>
-    
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <blockquote>
+<p>Martin Fowler是国际著名的OO专家，敏捷开发方法的创始人之一，现为ThoughtWorks公司的首席科学家.福勒（Martin Fowler），在面向对象分析设计、UML、模式、软件开发方法学、XP、重构等方面，都是世界顶级的专家，现为Thought Works公司的首席科学家。Thought Works是一家从事企业应用开发和集成的公司。早在20世纪80年代，Fowler就是使用对象技术构建多层企业应用的倡导者，他著有几本经典书籍： 《企业应用架构模式》、《UML精粹》和《重构》等。—— 百度百科</p>
+</blockquote>
+<a id="more"></a>
+<p><strong>微服务</strong>的概念最初由Martin Fowler与James Lewis于2014年共同提出，微服务架构风格是一种使用一套小服务来开发单个应用的方式途径，每个服务运行在自己的进程中，并使用轻量级机制通信，通常是HTTP API，这些服务基于业务能力构建，并能够通过自动化部署机制来独立部署，这些服务使用不同的编程语言书写，以及不同数据存储技术，并保持最低限度的集中式管理。<br>随着微服务理论和实践的完善，一个真正的微服务都要体现一下特点：<br>粒度小，无状态，基于轻量级通信协议，可以独立开发、测试、部署、发布、升级，扩容。<br><img src="/css/images/sketch.png" alt="Alt text"><br>这是一张作者很喜欢的经典图例，很形象的说明了微服务与传统单体应把你用（monolithic application）的区别。单一应用通常是一个all in one的结构，所有对外接口，基础服务都封装到一个包内，如果横向扩展就需要全量复制包，通过网关或者负载均衡分发请求。在实际的应用中往往包内海风装有前端代码，所有包可以共享一个数据库层。微服务中每一个服务单元都是独立的，都可以单独部署到任何一台主机上，为了便于扩容和容错，服务单元的部署个数和所在主机都是灵活的分布。<br>举个简单的例子，一次我预定了一处甜点工作室给太太做一个生日蛋糕，先是烤好蛋糕，再在上面抹上一层奶油，最后点缀上水果巧克力，写上几个字。当太太吃到时候，虽然非常高兴但是觉得还是有点甜。这种时候通常只有两种选择，要么回去重做一个，再花一次钱（预算超支），要么说服我太太等到明年再给做一个（项目严重延期）。假设用微服务的思想怎么办？花最少的钱，做一个试吃的小块糕点，也有蛋糕，奶油，水果和巧克力，写不写字无所谓。如果太太满意，照样做一个正式的生日蛋糕，不喜欢的话，根据反馈，改进一下试吃蛋糕的口味，每次改进的成本其实远低于重做一个大蛋糕。</p>
 
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/03/25/分布式版本管理Git/">
-            <time datetime="2017-03-25T13:41:54.000Z" itemprop="datePublished">2017-03-25</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/microservice/">微服务</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/基础流程框架/">基础流程框架</a>
-    </div>
-
-                </div>
-            </div>
+        
         </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/03/25/解决的问题与现实挑战/">解决的问题与现实挑战</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/03/25/解决的问题与现实挑战/">
-            <time datetime="2017-03-25T13:25:41.000Z" itemprop="datePublished">2017-03-25</time>
-        </a>
-    </div>
+        <footer class="article-footer">
+            <div class="share-container">
 
 
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/microservice/">微服务</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/入门基础/">入门基础</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
-        <div class="timeline-row">
-            <span class="node"></span>
-            <div class="content">
-                
-    
-        <h1 itemprop="name">
-            <a class="timeline-article-title" href="/2017/03/24/前言/">前言</a>
-        </h1>
-    
-
-                <div class="article-meta">
-                    
-    <div class="article-date">
-        <i class="fa fa-calendar"></i>
-        <a href="/2017/03/24/前言/">
-            <time datetime="2017-03-24T15:16:26.000Z" itemprop="datePublished">2017-03-24</time>
-        </a>
-    </div>
-
-
-                    
-    <div class="article-category">
-    	<i class="fa fa-folder"></i>
-        <a class="article-category-link" href="/categories/microservice/">微服务</a>
-    </div>
-
-                    
-    <div class="article-tag">
-        <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/入门基础/">入门基础</a>
-    </div>
-
-                </div>
-            </div>
-        </div>
-    
+    <div class="bdsharebuttonbox">
+    <a href="#" class="bds_more" data-cmd="more">分享到：</a>
+    <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间">QQ空间</a>
+    <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博">新浪微博</a>
+    <a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博">腾讯微博</a>
+    <a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网">人人网</a>
+    <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信">微信</a>
 </div>
+<script>
+window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{"bdSize":16}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+<style>
+    .bdshare_popup_box {
+        border-radius: 4px;
+        border: #e1e1e1 solid 1px;
+    }
+    .bdshare-button-style0-16 a,
+    .bdshare-button-style0-16 .bds_more {
+        padding-left: 20px;
+        margin: 6px 10px 6px 0;
+    }
+    .bdshare_dialog_list a,
+    .bdshare_popup_list a,
+    .bdshare_popup_bottom a {
+        font-family: 'Microsoft Yahei';
+    }
+    .bdshare_popup_top {
+        display: none;
+    }
+    .bdshare_popup_bottom {
+        height: auto;
+        padding: 5px;
+    }
+</style>
+
+
+</div>
+
+            
+    
+        <a href="http://yoursite.com/2017/03/26/微服务概念/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/03/26/微服务概念/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2017/03/25/分布式版本管理Git/" id="article-nav-older" class="article-nav-link-wrap">
+            <strong class="article-nav-caption">下一篇</strong>
+            <div class="article-nav-title">分布式版本管理</div>
+        </a>
+    
+</nav>
+
+
+    
+</article>
+
+
+    
+    <section id="comments">
+    
+        
+    <!--
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+    -->
+    <!--高速版，加载速度快，使用前需测试页面的兼容性-->
+    <div id="SOHUCS" sid="微服务概念"></div>
+    <script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
+    <script type="text/javascript">
+        window.changyan.api.config({
+        appid: 'cysUMziLi',
+        conf: 'prod_2b37c77132b01eb7f088b433611aeafb'
+        });
+    </script>
+
+    
+    </section>
+
 </section>
             
                 <aside id="sidebar">
@@ -408,11 +401,13 @@
     <script>
     var disqus_config = function () {
         
-        this.page.identifier = 'undefined';
+            this.page.url = 'http://yoursite.com/2017/03/26/微服务概念/';
+        
+        this.page.identifier = '微服务概念';
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/count.js';
+        s.src = '//' + 'hexo-theme-icarus' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
