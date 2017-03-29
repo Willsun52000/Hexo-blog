@@ -32,6 +32,7 @@ jspm_packages
 
 # generate public
 public
+db.json
 
 # Optional npm cache directory
 .npm

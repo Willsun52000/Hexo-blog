@@ -8,7 +8,7 @@
     };
     (function() { 
         var d = document, s = d.createElement('script');  
-        s.src = '//' + '<%= theme.comment.disqus %>' + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
+        s.src = '/js/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
