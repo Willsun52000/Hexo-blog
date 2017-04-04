@@ -1,8 +1,8 @@
 ---
-title: 知识管理Confluence
+title: 3-2 知识管理Confluence
 category: 微服务
 tag: 基础流程
-date: 2017-03-30
+date: 2017-04-04
 ---
 > Atlassian Confluence（简称Confluence）是一个专业的wiki程序。它是一个知识管理的工具，通过它可以实现团队成员之间的协作和知识共享。Confluence 不是一个开源软件，非商业用途可以免费使用。
 Confluence使用简单，但它强大的编辑和站点管理特征能够帮助团队成员之间共享信息，文档协作，集体讨论。 目前，Confluence被用于广泛地用于项目团队，开发团队，市场销售团队。
