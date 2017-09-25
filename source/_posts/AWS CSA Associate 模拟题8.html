@@ -1,0 +1,367 @@
+---
+title: AWS CSA Associate 模拟题8
+category: 云计算
+tag: AWS认证考试
+date: 2017-07-30
+---
+
+AWS是亚马逊公司开发的云计算服务，包括计算服务EC2，对象存储服务S3，关系数据库服务RDS等。由于AWS在整个行业的领先位置，学习AWS的云计算并通过认证无疑是了解整个云计算公有云服务特点的最佳选择。根据本人最近学习备考的经历，总结最后查漏补缺的模拟题，希望能够给同样计划备考AWS认证的同学提供些许帮助。
+
+<!--more-->
+
+<p>473. <br>
+Please select the most correct answer regarding the persistence of the Amazon Instance Store</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> The data on an instance store volume persists only during the life of the associated Amazon EC2 instance</div><div class="checklist-item"><input type="checkbox"> The data on an instance store volume is lost when the security group rule of the associated instance is changed.</div><div class="checklist-item"><input type="checkbox"> The data on an instance store volume persists even after associated Amazon EC2 instance is deleted</div></div>
+
+<p>474. <br>
+A user has launched an EC2 instance from an instance store backed AMI. The user has attached an additional instance store volume to the instance. The user wants to create an AMI from the running instance. Will the AMI have the additional instance store volume data?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Yes, the block device mapping will have information about the additional instance store volume</div><div class="checklist-item"><input type="checkbox"> No, since the instance store backed AMI can have only the root volume bundled</div><div class="checklist-item"><input type="checkbox"> It is not possible to attach an additional instance store volume to the existing instance store backed AMI instance</div><div class="checklist-item"><input type="checkbox"> No, since this is ephemeral storage it will not be a part of the AMI</div></div>
+
+<p>475. <br>
+When an EC2 instance that is backed by an S3-based AMI Is terminated, what happens to the data on the root volume?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Data is automatically saved as an EBS volume.</div><div class="checklist-item"><input type="checkbox"> Data is automatically saved as an EBS snapshot.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Data is automatically deleted</div><div class="checklist-item"><input type="checkbox"> Data is unavailable until the instance is restarted.</div></div>
+
+<p>476. <br>
+A user has launched an EC2 instance from an instance store backed AMI. If the user restarts the instance, what will happen to the ephemeral storage data?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> All the data will be erased but the ephemeral storage will stay connected</div><div class="checklist-item"><input type="checkbox"> All data will be erased and the ephemeral storage is released</div><div class="checklist-item"><input type="checkbox"> It is not possible to restart an instance launched from an instance store backed AMI</div><div class="checklist-item"><input type="checkbox" checked="checked"> The data is preserved</div></div>
+
+<p>477. <br>
+When an EC2 EBS-backed instance is stopped, what happens to the data on any ephemeral store volumes?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Data will be deleted and will no longer be accessible</div><div class="checklist-item"><input type="checkbox"> Data is automatically saved in an EBS volume.</div><div class="checklist-item"><input type="checkbox"> Data is automatically saved as an EBS snapshot</div><div class="checklist-item"><input type="checkbox"> Data is unavailable until the instance is restarted</div></div>
+
+<p>478.* <br>
+A user has launched an EC2 Windows instance from an instance store backed AMI. The user has also set the Instance initiated shutdown behavior to stop. What will happen when the user shuts down the OS?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> It will not allow the user to shutdown the OS when the shutdown behavior is set to Stop</div><div class="checklist-item"><input type="checkbox" checked="checked"> It is not possible to set the termination behavior to Stop for an Instance store backed AMI instance</div><div class="checklist-item"><input type="checkbox"> The instance will stay running but the OS will be shutdown</div><div class="checklist-item"><input type="checkbox"> The instance will be terminated</div></div>
+
+<p>479. <br>
+Which of the following will occur when an EC2 instance in a VPC (Virtual Private Cloud) with an associated Elastic IP is stopped and started? (Choose 2 answers)</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The Elastic IP will be dissociated from the instance</div><div class="checklist-item"><input type="checkbox" checked="checked"> All data on instance-store devices will be lost</div><div class="checklist-item"><input type="checkbox"> All data on EBS (Elastic Block Store) devices will be lost</div><div class="checklist-item"><input type="checkbox"> The ENI (Elastic Network Interface) is detached</div><div class="checklist-item"><input type="checkbox" checked="checked"> The underlying host for the instance is changed</div></div>
+
+<p>480. <br>
+You are designing an enterprise data storage system. Your data management software system requires mountable disks and a real filesystem, so you cannot use S3 for storage. You need persistence, so you will be using AWS EBS Volumes for your system. The system needs as low-cost storage as possible, and access is not frequent or high throughput, and is mostly sequential reads. Which is the most appropriate EBS Volume Type for this scenario?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> gp1</div><div class="checklist-item"><input type="checkbox"> io1</div><div class="checklist-item"><input type="checkbox" checked="checked"> standard (Standard or Magnetic volumes are suited for cold workloads where data is infrequently accessed, or scenarios where the lowest storage cost is important)</div><div class="checklist-item"><input type="checkbox"> gp2</div></div>
+
+<p>481. <br>
+Which EBS volume type is best for high performance NoSQL cluster deployments?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> io1 (io1 volumes, or Provisioned IOPS (PIOPS) SSDs, are best for: Critical business applications that require sustained IOPS performance, or more than 10,000 IOPS or 160 MiB/s of throughput per volume, like large database workloads, such as MongoDB.)</div><div class="checklist-item"><input type="checkbox"> gp1</div><div class="checklist-item"><input type="checkbox"> standard</div><div class="checklist-item"><input type="checkbox"> gp2</div></div>
+
+<p>482. <br>
+Provisioned IOPS Costs: you are charged for the IOPS and storage whether or not you use them in a given month.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> FALSE</div><div class="checklist-item"><input type="checkbox" checked="checked"> TRUE</div></div>
+
+<p>483. <br>
+A user is trying to create a PIOPS EBS volume with 8 GB size and 200 IOPS. Will AWS create the volume?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Yes, since the ratio between EBS and IOPS is less than 30</div><div class="checklist-item"><input type="checkbox"> No, since the PIOPS and EBS size ratio is less than 30</div><div class="checklist-item"><input type="checkbox"> No, the EBS size is less than 10 GB</div><div class="checklist-item"><input type="checkbox"> Yes, since PIOPS is higher than 100</div></div>
+
+<p>484.* <br>
+A user has provisioned 2000 IOPS to the EBS volume. The application hosted on that EBS is experiencing less IOPS than provisioned. Which of the below mentioned options does not affect the IOPS of the volume?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The application does not have enough IO for the volume</div><div class="checklist-item"><input type="checkbox"> Instance is EBS optimized</div><div class="checklist-item"><input type="checkbox"> The EC2 instance has 10 Gigabit Network connectivity</div><div class="checklist-item"><input type="checkbox" checked="checked"> Volume size is too large</div></div>
+
+<p>485. <br>
+A user is trying to create a PIOPS EBS volume with 4000 IOPS and 100 GB size. AWS does not allow the user to create this volume. What is the possible root cause for this?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> The ratio between IOPS and the EBS volume is higher than 30</div><div class="checklist-item"><input type="checkbox"> The maximum IOPS supported by EBS is 3000</div><div class="checklist-item"><input type="checkbox"> The ratio between IOPS and the EBS volume is lower than 50</div><div class="checklist-item"><input type="checkbox"> PIOPS is supported for EBS higher than 500 GB size</div></div>
+
+<p>486.* <br>
+An existing application stores sensitive information on a non-boot Amazon EBS data volume attached to an Amazon Elastic Compute Cloud instance. Which of the following approaches would protect the sensitive data on an Amazon EBS volume?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Upload your customer keys to AWS CloudHSM. Associate the Amazon EBS volume with AWS CloudHSM. Remount the Amazon EBS volume.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create and mount a new, encrypted Amazon EBS volume. Move the data to the new volume. Delete the old Amazon EBS volume.</div><div class="checklist-item"><input type="checkbox"> Unmount the EBS volume. Toggle the encryption attribute to True. Re-mount the Amazon EBS volume.</div><div class="checklist-item"><input type="checkbox"> Snapshot the current Amazon EBS volume. Restore the snapshot to a new, encrypted Amazon EBS volume. Mount the Amazon EBS volume (Need to create a snapshot, create an encrypted copy of snapshot and then create a EBS volume and mount it)</div></div>
+
+<p>487.* <br>
+Is it possible to access your EBS snapshots?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Yes, through the Amazon S3 APIs.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Yes, through the Amazon EC2 APIs</div><div class="checklist-item"><input type="checkbox"> No, EBS snapshots cannot be accessed; they can only be used to create a new EBS volume.</div><div class="checklist-item"><input type="checkbox"> EBS doesn’t provide snapshots.</div></div>
+
+<p>488. <br>
+Which of the following approaches provides the lowest cost for Amazon Elastic Block Store snapshots while giving you the ability to fully restore data?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Maintain two snapshots: the original snapshot and the latest incremental snapshot</div><div class="checklist-item"><input type="checkbox"> Maintain a volume snapshot; subsequent snapshots will overwrite one another</div><div class="checklist-item"><input type="checkbox" checked="checked"> Maintain a single snapshot the latest snapshot is both Incremental and complete</div><div class="checklist-item"><input type="checkbox"> Maintain the most current snapshot, archive the original and incremental to Amazon Glacier.</div></div>
+
+<p>489. <br>
+Which procedure for backing up a relational database on EC2 that is using a set of RAIDed EBS volumes for storage minimizes the time during which the database cannot be written to and results in a consistent backup?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Detach EBS volumes, 2. Start EBS snapshot of volumes, 3. Re-attach EBS volumes</div><div class="checklist-item"><input type="checkbox"> Stop the EC2 Instance. 2. Snapshot the EBS volumes</div><div class="checklist-item"><input type="checkbox"> Suspend disk I/O, 2. Create an image of the EC2 Instance, 3. Resume disk I/O</div><div class="checklist-item"><input type="checkbox"> Suspend disk I/O, 2. Start EBS snapshot of volumes, 3. Resume disk I/O</div><div class="checklist-item"><input type="checkbox" checked="checked"> Suspend disk I/O, 2. Start EBS snapshot of volumes, 3. Wait for snapshots to complete, 4. Resume disk I/O</div></div>
+
+<p>490. <br>
+How can an EBS volume that is currently attached to an EC2 instance be migrated from one Availability Zone to another?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Detach the volume and attach it to another EC2 instance in the other AZ.</div><div class="checklist-item"><input type="checkbox"> Simply create a new volume in the other AZ and specify the original volume as the source.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create a snapshot of the volume, and create a new volume from the snapshot in the other AZ</div><div class="checklist-item"><input type="checkbox"> Detach the volume, then use the ec2-migrate-volume command to move it to another AZ.</div></div>
+
+<p>491. <br>
+How are the EBS snapshots saved on Amazon S3?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Exponentially</div><div class="checklist-item"><input type="checkbox" checked="checked"> Incrementally</div><div class="checklist-item"><input type="checkbox"> EBS snapshots are not stored in the Amazon S3</div><div class="checklist-item"><input type="checkbox"> Decrementally</div></div>
+
+<p>492. <br>
+EBS Snapshots occur <strong>_</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Asynchronously</div><div class="checklist-item"><input type="checkbox"> Synchronously</div><div class="checklist-item"><input type="checkbox"> Weekly</div></div>
+
+<p>493. <br>
+What will be the status of the snapshot until the snapshot is complete?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Running</div><div class="checklist-item"><input type="checkbox"> Working</div><div class="checklist-item"><input type="checkbox"> Progressing</div><div class="checklist-item"><input type="checkbox" checked="checked"> Pending</div></div>
+
+<p>494. <br>
+Before I delete an EBS volume, what can I do if I want to recreate the volume later?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Create a copy of the EBS volume (not a snapshot)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create and Store a snapshot of the volume</div><div class="checklist-item"><input type="checkbox"> Download the content to an EC2 instance</div><div class="checklist-item"><input type="checkbox"> Back up the data in to a physical disk</div></div>
+
+<p>495.* <br>
+Which of the following are true regarding encrypted Amazon Elastic Block Store (EBS) volumes? Choose 2 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Supported on all Amazon EBS volume types</div><div class="checklist-item"><input type="checkbox" checked="checked"> Snapshots are automatically encrypted</div><div class="checklist-item"><input type="checkbox"> Available to all instance types</div><div class="checklist-item"><input type="checkbox"> Existing volumes can be encrypted</div><div class="checklist-item"><input type="checkbox"> Shared volumes can be encrypted</div></div>
+
+<p>496. <br>
+Amazon EBS snapshots have which of the following two characteristics? (Choose 2.) Choose 2 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> EBS snapshots only save incremental changes from snapshot to snapshot</div><div class="checklist-item"><input type="checkbox" checked="checked"> EBS snapshots can be created in real-time without stopping an EC2 instance (the snapshot can be taken real time however it will not be consistent and the recommended way is to stop or freeze the IO)</div><div class="checklist-item"><input type="checkbox"> EBS snapshots can only be restored to an EBS volume of the same size or smaller (EBS volume restored from snapshots need to be of the same size of larger size)</div><div class="checklist-item"><input type="checkbox"> EBS snapshots can only be restored and mounted to an instance in the same Availability Zone as the original EBS volume (Snapshots are specific to Region and can be used to create a volume in any AZ and does not depend on the original EBS volume AZ)</div></div>
+
+<p>497. <br>
+A user is planning to schedule a backup for an EBS volume. The user wants security of the snapshot data. How can the user achieve data encryption with a snapshot?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Use encrypted EBS volumes so that the snapshot will be encrypted by AWS (Refer link)</div><div class="checklist-item"><input type="checkbox"> While creating a snapshot select the snapshot with encryption</div><div class="checklist-item"><input type="checkbox"> By default the snapshot is encrypted by AWS</div><div class="checklist-item"><input type="checkbox"> Enable server side encryption for the snapshot using S3</div></div>
+
+<p>498. <br>
+A sys admin is trying to understand EBS snapshots. Which of the below mentioned statements will not be useful to the admin to understand the concepts about a snapshot?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Snapshot is synchronous</div><div class="checklist-item"><input type="checkbox"> It is recommended to stop the instance before taking a snapshot for consistent data</div><div class="checklist-item"><input type="checkbox"> Snapshot is incremental</div><div class="checklist-item"><input type="checkbox"> Snapshot captures the data that has been written to the hard disk when the snapshot command was executed</div></div>
+
+<p>499.* <br>
+When creation of an EBS snapshot is initiated but not completed, the EBS volume</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Cannot be detached or attached to an EC2 instance until me snapshot completes</div><div class="checklist-item"><input type="checkbox"> Can be used in read-only mode while me snapshot is in progress</div><div class="checklist-item"><input type="checkbox" checked="checked"> Can be used while the snapshot is in progress</div><div class="checklist-item"><input type="checkbox"> Cannot be used until the snapshot completes</div></div>
+
+<p>500. <br>
+You have a server with a 5O0GB Amazon EBS data volume. The volume is 80% full. You need to back up the volume at regular intervals and be able to re-create the volume in a new Availability Zone in the shortest time possible. All applications using the volume can be paused for a period of a few minutes with no discernible user impact. Which of the following backup methods will best fulfill your requirements?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Take periodic snapshots of the EBS volume</div><div class="checklist-item"><input type="checkbox"> Use a third-party Incremental backup application to back up to Amazon Glacier</div><div class="checklist-item"><input type="checkbox"> Periodically back up all data to a single compressed archive and archive to Amazon S3 using a parallelized multi-part upload</div><div class="checklist-item"><input type="checkbox"> Create another EBS volume in the second Availability Zone attach it to the Amazon EC2 instance, and use a disk manager to mirror me two disks</div></div>
+
+<p>501. <br>
+A user is creating a snapshot of an EBS volume. Which of the below statements is incorrect in relation to the creation of an EBS snapshot?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Its incremental</div><div class="checklist-item"><input type="checkbox"> It can be used to launch a new instance</div><div class="checklist-item"><input type="checkbox" checked="checked"> It is stored in the same AZ as the volume (stored in the same region)</div><div class="checklist-item"><input type="checkbox"> It is a point in time backup of the EBS volume</div></div>
+
+<p>502. <br>
+A user has created a snapshot of an EBS volume. Which of the below mentioned usage cases is not possible with respect to a snapshot?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Mirroring the volume from one AZ to another AZ</div><div class="checklist-item"><input type="checkbox"> Launch an instance</div><div class="checklist-item"><input type="checkbox" checked="checked"> Decrease the volume size</div><div class="checklist-item"><input type="checkbox"> Increase the size of the volume</div></div>
+
+<p>503. <br>
+What is true of the way that encryption works with EBS?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Snapshotting an encrypted volume makes an encrypted snapshot; restoring an encrypted snapshot creates an encrypted volume when specified / requested.</div><div class="checklist-item"><input type="checkbox"> Snapshotting an encrypted volume makes an encrypted snapshot when specified / requested; restoring an encrypted snapshot creates an encrypted volume when specified / requested.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Snapshotting an encrypted volume makes an encrypted snapshot; restoring an encrypted snapshot always creates an encrypted volume.</div><div class="checklist-item"><input type="checkbox"> Snapshotting an encrypted volume makes an encrypted snapshot when specified / requested; restoring an encrypted snapshot always creates an encrypted volume.</div></div>
+
+<p>504. <br>
+Why are more frequent snapshots of EBS Volumes faster?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Blocks in EBS Volumes are allocated lazily, since while logically separated from other EBS Volumes, Volumes often share the same physical hardware. Snapshotting the first time forces full block range allocation, so the second snapshot doesn’t need to perform the allocation phase and is faster.</div><div class="checklist-item"><input type="checkbox" checked="checked"> The snapshots are incremental so that only the blocks on the device that have changed after your last snapshot are saved in the new snapshot.</div><div class="checklist-item"><input type="checkbox"> AWS provisions more disk throughput for burst capacity during snapshots if the drive has been pre-warmed by snapshotting and reading all blocks.</div><div class="checklist-item"><input type="checkbox"> The drive is pre-warmed, so block access is more rapid for volumes when every block on the device has already been read at least one time.</div></div>
+
+<p>505. <br>
+Which is not a restriction on AWS EBS Snapshots?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Snapshots which are shared cannot be used as a basis for other snapshots (Snapshots shared with other users are usable in full by the recipient, including but limited to the ability to base modified volumes and snapshots)</div><div class="checklist-item"><input type="checkbox"> You cannot share a snapshot containing an AWS Access Key ID or AWS Secret Access Key</div><div class="checklist-item"><input type="checkbox"> You cannot share encrypted snapshots (NOTE: this has be updated partially where you can share a encrypted snapshot with other accounts)</div><div class="checklist-item"><input type="checkbox"> Snapshot restorations are restricted to the region in which the snapshots are created</div></div>
+
+<p>506. <br>
+There is a very serious outage at AWS. EC2 is not affected, but your EC2 instance deployment scripts stopped working in the region with the outage. What might be the issue?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The AWS Console is down, so your CLI commands do not work.</div><div class="checklist-item"><input type="checkbox" checked="checked"> S3 is unavailable, so you can’t create EBS volumes from a snapshot you use to deploy new volumes. (EBS volume snapshots are stored in S3. If S3 is unavailable, snapshots are unavailable)</div><div class="checklist-item"><input type="checkbox"> AWS turns off the <code>DeployCode</code> API call when there are major outages, to protect from system floods.</div><div class="checklist-item"><input type="checkbox"> None of the other answers make sense. If EC2 is not affected, it must be some other issue.</div></div>
+
+<p>507. <br>
+A user is trying to pre-warm a blank EBS volume attached to a Linux instance. Which of the below mentioned steps should be performed by the user?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> There is no need to pre-warm an EBS volume (with latest update no pre-warming is needed)</div><div class="checklist-item"><input type="checkbox"> Contact AWS support to pre-warm (This used to be the case before, but pre warming is not necessary now)</div><div class="checklist-item"><input type="checkbox"> Unmount the volume before pre-warming</div><div class="checklist-item"><input type="checkbox"> Format the device</div></div>
+
+<p>508. <br>
+A user has created an EBS volume of 10 GB and attached it to a running instance. The user is trying to access EBS for first time. Which of the below mentioned options is the correct statement with respect to a first time EBS access?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The volume will show a size of 8 GB</div><div class="checklist-item"><input type="checkbox"> The volume will show a loss of the IOPS performance the first time (the volume needed to be wiped cleaned before for new volumes, however pre warming is not needed any more)</div><div class="checklist-item"><input type="checkbox" checked="checked"> The volume will be blank</div><div class="checklist-item"><input type="checkbox"> If the EBS is mounted it will ask the user to create a file system</div></div>
+
+<p>509. <br>
+You are running a database on an EC2 instance, with the data stored on Elastic Block Store (EBS) for persistence At times throughout the day, you are seeing large variance in the response times of the database queries Looking into the instance with the isolate command you see a lot of wait time on the disk volume that the database’s data is stored on. What two ways can you improve the performance of the database’s storage while maintaining the current persistence of the data? Choose 2 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Move to an SSD backed instance</div><div class="checklist-item"><input type="checkbox" checked="checked"> Move the database to an EBS-Optimized Instance</div><div class="checklist-item"><input type="checkbox" checked="checked"> Use Provisioned IOPs EBS</div><div class="checklist-item"><input type="checkbox"> Use the ephemeral storage on an m2.4xLarge Instance Instead</div></div>
+
+<p>510. <br>
+You have launched an EC2 instance with four (4) 500 GB EBS Provisioned IOPS volumes attached. The EC2 Instance is EBS-Optimized and supports 500 Mbps throughput between EC2 and EBS. The two EBS volumes are configured as a single RAID 0 device, and each Provisioned IOPS volume is provisioned with 4,000 IOPS (4000 16KB reads or writes) for a total of 16,000 random IOPS on the instance. The EC2 Instance initially delivers the expected 16,000 IOPS random read and write performance. Sometime later in order to increase the total random I/O performance of the instance, you add an additional two 500 GB EBS Provisioned IOPS volumes to the RAID. Each volume is provisioned to 4,000 IOPS like the original four for a total of 24,000 IOPS on the EC2 instance Monitoring shows that the EC2 instance CPU utilization increased from 50% to 70%, but the total random IOPS measured at the instance level does not increase at all. What is the problem and a valid solution?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Larger storage volumes support higher Provisioned IOPS rates: increase the provisioned volume storage of each of the 6 EBS volumes to 1TB.</div><div class="checklist-item"><input type="checkbox" checked="checked"> EBS-Optimized throughput limits the total IOPS that can be utilized use an EBS-Optimized instance that provides larger throughput. (EC2 Instance types have limit on max throughput and would require larger instance types to provide 24000 IOPS)</div><div class="checklist-item"><input type="checkbox"> Small block sizes cause performance degradation, limiting the I’O throughput, configure the instance device driver and file system to use 64KB blocks to increase throughput. <br>
+RAID 0 only scales linearly to about 4 devices, use RAID 0 with 4 EBS Provisioned IOPS volumes but increase each Provisioned IOPS EBS volume to 6.000 IOPS.</div><div class="checklist-item"><input type="checkbox"> The standard EBS instance root volume limits the total IOPS rate, change the instant root volume to also be a 500GB 4,000 Provisioned IOPS volume</div></div>
+
+<p>511. <br>
+A user has deployed an application on an EBS backed EC2 instance. For a better performance of application, it requires dedicated EC2 to EBS traffic. How can the user achieve this?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Launch the EC2 instance as EBS provisioned with PIOPS EBS</div><div class="checklist-item"><input type="checkbox"> Launch the EC2 instance as EBS enhanced with PIOPS EBS</div><div class="checklist-item"><input type="checkbox"> Launch the EC2 instance as EBS dedicated with PIOPS EBS</div><div class="checklist-item"><input type="checkbox" checked="checked"> Launch the EC2 instance as EBS optimized with PIOPS EBS</div></div>
+
+<p>512. <br>
+You are responsible for a legacy web application whose server environment is approaching end of life. You would like to migrate this application to AWS as quickly as possible, since the application environment currently has the following limitations: The VM’s single 10GB VMDK is almost full. The virtual network interface still uses the 10Mbps driver, which leaves your 100Mbps WAN connection completely underutilized. It is currently running on a highly customized Windows VM within a VMware environment: You do not have the installation media. This is a mission critical application with an RTO (Recovery Time Objective) of 8 hours. RPO (Recovery Point Objective) of 1 hour. How could you best migrate this application to AWS while meeting your business continuity requirements?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Use the EC2 VM Import Connector for vCenter to import the VM into EC2</div><div class="checklist-item"><input type="checkbox" checked="checked"> Use Import/Export to import the VM as an EBS snapshot and attach to EC2. (Import/Export is used to transfer large amount of data)</div><div class="checklist-item"><input type="checkbox"> Use S3 to create a backup of the VM and restore the data into EC2.</div><div class="checklist-item"><input type="checkbox"> Use the ec2-bundle-instance API to Import an Image of the VM into EC2 (only bundles an windows instance store instance)</div></div>
+
+<p>513. <br>
+You are tasked with moving a legacy application from a virtual machine running inside your datacenter to an Amazon VPC. Unfortunately this app requires access to a number of on-premises services and no one who configured the app still works for your company. Even worse there’s no documentation for it. What will allow the application running inside the VPC to reach back and access its internal dependencies without being reconfigured? (Choose 3 answers)</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> An AWS Direct Connect link between the VPC and the network housing the internal services (VPN or a DX for communication)</div><div class="checklist-item"><input type="checkbox"> An Internet Gateway to allow a VPN connection. (Virtual and Customer gateway is needed)</div><div class="checklist-item"><input type="checkbox"> An Elastic IP address on the VPC instance (Don’t need a EIP as private subnets can also interact with on-premises network)</div><div class="checklist-item"><input type="checkbox" checked="checked"> An IP address space that does not conflict with the one on-premises (IP address cannot conflict)</div><div class="checklist-item"><input type="checkbox"> Entries in Amazon Route 53 that allow the Instance to resolve its dependencies’ IP addresses (Route 53 is not required)</div><div class="checklist-item"><input type="checkbox" checked="checked"> A VM Import of the current virtual machine (VM Import to copy the VM to AWS as there is no documentation it can’t be configured from scratch)</div></div>
+
+<p>514. <br>
+You have multiple Amazon EC2 instances running in a cluster across multiple Availability Zones within the same region. What combination of the following should be used to ensure the highest network performance (packets per second), lowest latency, and lowest jitter? Choose 3 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Amazon EC2 placement groups (would not work for multiple AZs)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Enhanced networking (provides network performance, lowest latency)</div><div class="checklist-item"><input type="checkbox"> Amazon PV AMI (Requires HVM)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon HVM AMI (Requires HVM)</div><div class="checklist-item"><input type="checkbox"> Amazon Linux (Can be on others as well)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon VPC (works only in VPC, can’t enable enhanced networking if the instance is in EC2-Classic)</div></div>
+
+<p>515. <br>
+A group of researchers is studying the migration pattern of a beetle that eats and destroys gram. The researchers must process massive amounts of data and run statistics. Which one of the following options provides the high performance computing for this purpose.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Configure an Autoscaling Scaling group to launch dozens of spot instances to run the statistical analysis simultaneously</div><div class="checklist-item"><input type="checkbox"> Launch AMI instances that support SR-IOV in a single Availability Zone</div><div class="checklist-item"><input type="checkbox"> Launch compute optimized (C4) instances in at least two Availability Zones</div><div class="checklist-item"><input type="checkbox" checked="checked"> Launch enhanced network type instances in a placement group</div></div>
+
+<p>516. <br>
+A user is launching an EC2 instance in the US East region. Which of the below mentioned options is recommended by AWS with respect to the selection of the availability zone?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Always select the US-East-1-a zone for HA</div><div class="checklist-item"><input type="checkbox" checked="checked"> Do not select the AZ; instead let AWS select the AZ</div><div class="checklist-item"><input type="checkbox"> The user can never select the availability zone while launching an instance</div><div class="checklist-item"><input type="checkbox"> Always select the AZ while launching an instance</div></div>
+
+<p>517. <br>
+You have multiple Amazon EC2 instances running in a cluster across multiple Availability Zones within the same region. What combination of the following should be used to ensure the highest network performance (packets per second), lowest latency, and lowest jitter? Choose 3 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Amazon EC2 placement groups (would not work for multiple AZs)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Enhanced networking (provides network performance, lowest latency)</div><div class="checklist-item"><input type="checkbox"> Amazon PV AMI (Needs HVM)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon HVM AMI</div><div class="checklist-item"><input type="checkbox"> Amazon Linux (Can work on other flavors of Unix as well)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon VPC (Enhanced networking works only in VPC)</div></div>
+
+<p>518. <br>
+Regarding the attaching of ENI to an instance, what does ‘warm attach’ refer to?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Attaching an ENI to an instance when it is stopped</div><div class="checklist-item"><input type="checkbox"> Attaching an ENI to an instance when it is running</div><div class="checklist-item"><input type="checkbox"> Attaching an ENI to an instance during the launch process</div></div>
+
+<p>519. <br>
+Can I detach the primary (eth0) network interface when the instance is running or stopped?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Yes, You can.</div><div class="checklist-item"><input type="checkbox" checked="checked"> You cannot</div><div class="checklist-item"><input type="checkbox"> Depends on the state of the interface at the time</div></div>
+
+<p>520. <br>
+By default what are ENIs that are automatically created and attached to instances using the EC2 console set to do when the attached instance terminates?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Remain as is</div><div class="checklist-item"><input type="checkbox" checked="checked"> Terminate</div><div class="checklist-item"><input type="checkbox"> Hibernate</div><div class="checklist-item"><input type="checkbox"> Pause</div></div>
+
+<p>521. <br>
+Select the incorrect statement</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> In Amazon EC2, the private IP addresses only returned to Amazon EC2 when the instance is stopped or terminated</div><div class="checklist-item"><input type="checkbox"> In Amazon VPC, an instance retains its private IP addresses when the instance is stopped.</div><div class="checklist-item"><input type="checkbox" checked="checked"> In Amazon VPC, an instance does NOT retain its private IP addresses when the instance is stopped</div><div class="checklist-item"><input type="checkbox"> In Amazon EC2, the private IP address is associated exclusively with the instance for its lifetime</div></div>
+
+<p>522. <br>
+To ensure failover capabilities, consider using a <strong>_</strong> for incoming traffic on a network interface”.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> primary public IP</div><div class="checklist-item"><input type="checkbox" checked="checked"> secondary private IP</div><div class="checklist-item"><input type="checkbox"> secondary public IP</div><div class="checklist-item"><input type="checkbox"> add on secondary IP</div></div>
+
+<p>523. <br>
+Which statements are true about Elastic Network Interface (ENI)? (Choose 2 answers)</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> You can attach an ENI in one AZ to an instance in another AZ</div><div class="checklist-item"><input type="checkbox" checked="checked"> You can change the security group membership of an ENI</div><div class="checklist-item"><input type="checkbox" checked="checked"> You can attach an instance to tow different subnets within a VPC by using two ENIs</div><div class="checklist-item"><input type="checkbox"> You can attach an ENI in one VPC to an instance in another VPC</div></div>
+
+<p>524.* <br>
+A user is planning to host a web server as well as an app server on a single EC2 instance, which is a part of the public subnet of a VPC. How can the user setup to have two separate public IPs and separate security groups for both the application as well as the web server?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Launch a VPC instance with two network interfaces. Assign a separate security group to each and AWS will assign a separate public IP to them. (AWS cannot assign public IPs for instance with multiple ENIs)</div><div class="checklist-item"><input type="checkbox"> Launch VPC with two separate subnets and make the instance a part of both the subnets.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Launch a VPC instance with two network interfaces. Assign a separate security group and elastic IP to them.</div><div class="checklist-item"><input type="checkbox"> Launch a VPC with ELB such that it redirects requests to separate VPC instances of the public subnet.</div></div>
+
+<p>525. <br>
+An organization has created multiple components of a single application for compartmentalization. Currently all the components are hosted on a single EC2 instance. Due to security reasons the organization wants to implement two separate SSLs for the separate modules although it is already using VPC. How can the organization achieve this with a single instance?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Create a VPC instance, which will have both the ACL and the security group attached to it and have separate rules for each IP address.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create a VPC instance, which will have multiple network interfaces with multiple elastic IP addresses.</div><div class="checklist-item"><input type="checkbox"> You have to launch two instances each in a separate subnet and allow VPC peering for a single IP.</div><div class="checklist-item"><input type="checkbox"> Create a VPC instance, which will have multiple subnets attached to it and each will have a separate IP address.</div></div>
+
+<p>526. <br>
+Your system automatically provisions EIPs to EC2 instances in a VPC on boot. The system provisions the whole VPC and stack at once. You have two of them per VPC. On your new AWS account, your attempt to create a Development environment failed, after successfully creating Staging and Production environments in the same region. What happened?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> You didn’t choose the Development version of the AMI you are using.</div><div class="checklist-item"><input type="checkbox"> You didn’t set the Development flag to true when deploying EC2 instances.</div><div class="checklist-item"><input type="checkbox" checked="checked"> You hit the soft limit of 5 EIPs per region and requested a 6th. (There is a soft limit of 5 EIPs per Region for VPC on new accounts. The third environment could not allocate the 6th EIP)</div><div class="checklist-item"><input type="checkbox"> You hit the soft limit of 2 VPCs per region and requested a 3rd.</div></div>
+
+<p>527.* <br>
+A user has created a VPC with a public subnet. The user has terminated all the instances, which are part of the subnet. Which of the below mentioned statements is true with respect to this scenario?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The user cannot delete the VPC since the subnet is not deleted</div><div class="checklist-item"><input type="checkbox" checked="checked"> All network interface attached with the instances will be deleted</div><div class="checklist-item"><input type="checkbox"> When the user launches a new instance it cannot use the same subnet</div><div class="checklist-item"><input type="checkbox"> The subnet to which the instances were launched with will be deleted</div></div>
+
+<p>528. <br>
+You launch an Amazon EC2 instance without an assigned AWS identity and Access Management (IAM) role. Later, you decide that the instance should be running with an IAM role. Which action must you take in order to have a running Amazon EC2 instance with an IAM role assigned to it?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Create an image of the instance, and register the image with an IAM role assigned and an Amazon EBS volume mapping.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create a new IAM role with the same permissions as an existing IAM role, and assign it to the running instance. (As per AWS latest enhancement, this is possible now)</div><div class="checklist-item"><input type="checkbox"> Create an image of the instance, add a new IAM role with the same permissions as the desired IAM role, and deregister the image with the new role assigned.</div><div class="checklist-item"><input type="checkbox"> Create an image of the instance, and use this image to launch a new instance with the desired IAM role assigned (This was correct before, as it was not possible to add an IAM role to an existing instance)</div></div>
+
+<p>529. <br>
+What does the following command do with respect to the Amazon EC2 security groups? ec2-revoke RevokeSecurityGroupIngress</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Removes one or more security groups from a rule.</div><div class="checklist-item"><input type="checkbox"> Removes one or more security groups from an Amazon EC2 instance.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Removes one or more rules from a security group</div><div class="checklist-item"><input type="checkbox"> Removes a security group from our account.</div></div>
+
+<p>530. <br>
+Which of the following cannot be used in Amazon EC2 to control who has access to specific Amazon EC2 instances?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Security Groups</div><div class="checklist-item"><input type="checkbox" checked="checked"> IAM System</div><div class="checklist-item"><input type="checkbox"> SSH keys</div><div class="checklist-item"><input type="checkbox"> Windows passwords</div></div>
+
+<p>531. <br>
+You must assign each server to at least <strong>_</strong> security group</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> 3</div><div class="checklist-item"><input type="checkbox"> 2</div><div class="checklist-item"><input type="checkbox"> 4</div><div class="checklist-item"><input type="checkbox" checked="checked"> 1</div></div>
+
+<p>532. <br>
+A company is building software on AWS that requires access to various AWS services. Which configuration should be used to ensure that AWS credentials (i.e., Access Key ID/Secret Access Key combination) are not compromised?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Enable Multi-Factor Authentication for your AWS root account.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Assign an IAM role to the Amazon EC2 instance</div><div class="checklist-item"><input type="checkbox"> Store the AWS Access Key ID/Secret Access Key combination in software comments.</div><div class="checklist-item"><input type="checkbox"> Assign an IAM user to the Amazon EC2 Instance.</div></div>
+
+<p>533. <br>
+Which of the following items are required to allow an application deployed on an EC2 instance to write data to a DynamoDB table? Assume that no security keys are allowed to be stored on the EC2 instance. (Choose 2 answers)</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Create an IAM Role that allows write access to the DynamoDB table</div><div class="checklist-item"><input type="checkbox" checked="checked"> Add an IAM Role to a running EC2 instance. (As per AWS latest enhancement, this is possible now)</div><div class="checklist-item"><input type="checkbox"> Create an IAM User that allows write access to the DynamoDB table. <br>
+Add an IAM User to a running EC2 instance.</div><div class="checklist-item"><input type="checkbox"> Launch an EC2 Instance with the IAM Role included in the launch configuration (This was correct before, as it was not possible to add an IAM role to an existing instance)</div></div>
+
+<p>534. <br>
+You have an application running on an EC2 Instance, which will allow users to download files from a private S3 bucket using a pre-assigned URL. Before generating the URL the application should verify the existence of the file in S3. How should the application use AWS credentials to access the S3 bucket securely?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Use the AWS account access Keys the application retrieves the credentials from the source code of the application.</div><div class="checklist-item"><input type="checkbox"> Create a IAM user for the application with permissions that allow list access to the S3 bucket launch the instance as the IAM user and retrieve the IAM user’s credentials from the EC2 instance user data.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create an IAM role for EC2 that allows list access to objects in the S3 bucket. Launch the instance with the role, and retrieve the role’s credentials from the EC2 Instance metadata</div><div class="checklist-item"><input type="checkbox"> Create an IAM user for the application with permissions that allow list access to the S3 bucket. The application retrieves the IAM user credentials from a temporary directory with permissions that allow read access only to the application user.</div></div>
+
+<p>535. <br>
+A user has created an application, which will be hosted on EC2. The application makes calls to DynamoDB to fetch certain data. The application is using the DynamoDB SDK to connect with from the EC2 instance. Which of the below mentioned statements is true with respect to the best practice for security in this scenario?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> The user should attach an IAM role with DynamoDB access to the EC2 instance</div><div class="checklist-item"><input type="checkbox"> The user should create an IAM user with DynamoDB access and use its credentials within the application to connect with DynamoDB</div><div class="checklist-item"><input type="checkbox"> The user should create an IAM role, which has EC2 access so that it will allow deploying the application</div><div class="checklist-item"><input type="checkbox"> The user should create an IAM user with DynamoDB and EC2 access. Attach the user with the application so that it does not use the root account credentials</div></div>
+
+<p>536. <br>
+Your application is leveraging IAM Roles for EC2 for accessing object stored in S3. Which two of the following IAM policies control access to you S3 objects.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> An IAM trust policy allows the EC2 instance to assume an EC2 instance role.</div><div class="checklist-item"><input type="checkbox" checked="checked"> An IAM access policy allows the EC2 role to access S3 objects</div><div class="checklist-item"><input type="checkbox"> An IAM bucket policy allows the EC2 role to access S3 objects. (Bucket policy is defined with S3 and not with IAM)</div><div class="checklist-item"><input type="checkbox"> An IAM trust policy allows applications running on the EC2 instance to assume as EC2 role (Trust policy allows EC2 instance to assume the role)</div><div class="checklist-item"><input type="checkbox"> An IAM trust policy allows applications running on the EC2 instance to access S3 objects. (Applications can access S3 through EC2 assuming the role)</div></div>
+
+<p>537. <br>
+You have an application running on an EC2 Instance, which will allow users to download files from a private S3 bucket using a pre-assigned URL. Before generating the URL the application should verify the existence of the file in S3. How should the application use AWS credentials to access the S3 bucket securely?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Use the AWS account access Keys the application retrieves the credentials from the source code of the application.</div><div class="checklist-item"><input type="checkbox"> Create a IAM user for the application with permissions that allow list access to the S3 bucket launch the instance as the IAM user and retrieve the IAM user’s credentials from the EC2 instance user data.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create an IAM role for EC2 that allows list access to objects in the S3 bucket. Launch the instance with the role, and retrieve the role’s credentials from the EC2 Instance metadata</div><div class="checklist-item"><input type="checkbox"> Create an IAM user for the application with permissions that allow list access to the S3 bucket. The application retrieves the IAM user credentials from a temporary directory with permissions that allow read access only to the application user.</div></div>
+
+<p>538. <br>
+In the basic monitoring package for EC2, Amazon CloudWatch provides the following metrics:</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Web server visible metrics such as number failed transaction requests</div><div class="checklist-item"><input type="checkbox"> Operating system visible metrics such as memory utilization</div><div class="checklist-item"><input type="checkbox"> Database visible metrics such as number of connections</div><div class="checklist-item"><input type="checkbox" checked="checked"> Hypervisor visible metrics such as CPU utilization</div></div>
+
+<p>539. <br>
+Which of the following requires a custom CloudWatch metric to monitor?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Memory Utilization of an EC2 instance</div><div class="checklist-item"><input type="checkbox"> CPU Utilization of an EC2 instance</div><div class="checklist-item"><input type="checkbox"> Disk usage activity of an EC2 instance</div><div class="checklist-item"><input type="checkbox"> Data transfer of an EC2 instance</div></div>
+
+<p>540. <br>
+A user has configured CloudWatch monitoring on an EBS backed EC2 instance. If the user has not attached any additional device, which of the below mentioned metrics will always show a 0 value?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> DiskReadBytes</div><div class="checklist-item"><input type="checkbox"> NetworkIn</div><div class="checklist-item"><input type="checkbox"> NetworkOut</div><div class="checklist-item"><input type="checkbox"> CPUUtilization</div></div>
+
+<p>541. <br>
+A user is running a batch process on EBS backed EC2 instances. The batch process starts a few instances to process Hadoop Map reduce jobs, which can run between 50 – 600 minutes or sometimes for more time. The user wants to configure that the instance gets terminated only when the process is completed. How can the user configure this with CloudWatch?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Setup the CloudWatch action to terminate the instance when the CPU utilization is less than 5%</div><div class="checklist-item"><input type="checkbox"> Setup the CloudWatch with Auto Scaling to terminate all the instances</div><div class="checklist-item"><input type="checkbox"> Setup a job which terminates all instances after 600 minutes</div><div class="checklist-item"><input type="checkbox"> It is not possible to terminate instances automatically</div></div>
+
+<p>542. <br>
+An AWS account owner has setup multiple IAM users. One IAM user only has CloudWatch access. He has setup the alarm action, which stops the EC2 instances when the CPU utilization is below the threshold limit. What will happen in this case?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> It is not possible to stop the instance using the CloudWatch alarm</div><div class="checklist-item"><input type="checkbox"> CloudWatch will stop the instance when the action is executed</div><div class="checklist-item"><input type="checkbox"> The user cannot set an alarm on EC2 since he does not have the permission</div><div class="checklist-item"><input type="checkbox" checked="checked"> The user can setup the action but it will not be executed if the user does not have EC2 rights</div></div>
+
+<p>543. <br>
+A user has launched 10 instances from the same AMI ID using Auto Scaling. The user is trying to see the average CPU utilization across all instances of the last 2 weeks under the CloudWatch console. How can the user achieve this?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> View the Auto Scaling CPU metrics (Refer AS Instance Monitoring)</div><div class="checklist-item"><input type="checkbox"> Aggregate the data over the instance AMI ID (Works but needs detailed monitoring enabled)</div><div class="checklist-item"><input type="checkbox"> The user has to use the CloudWatchanalyser to find the average data across instances</div><div class="checklist-item"><input type="checkbox"> It is not possible to see the average CPU utilization of the same AMI ID since the instance ID is different</div></div></div></body></html>

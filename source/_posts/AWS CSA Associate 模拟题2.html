@@ -1,0 +1,197 @@
+---
+title: AWS CSA Associate 模拟题2
+category: 云计算
+tag: AWS认证考试
+date: 2017-05-15
+---
+
+AWS是亚马逊公司开发的云计算服务，包括计算服务EC2，对象存储服务S3，关系数据库服务RDS等。由于AWS在整个行业的领先位置，学习AWS的云计算并通过认证无疑是了解整个云计算公有云服务特点的最佳选择。根据本人最近学习备考的经历，总结最后查漏补缺的模拟题，希望能够给同样计划备考AWS认证的同学提供些许帮助。
+
+<!--more-->
+
+<p>80. <br>
+Your supervisor asks you to create a highly-available website which serves static content from EC2 instances. Which of the following is not a requirement to accomplish this goal? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Multiple Availability Zones</div><div class="checklist-item"><input type="checkbox"> Multiple subnets</div><div class="checklist-item"><input type="checkbox" checked="checked"> An SQS queue</div><div class="checklist-item"><input type="checkbox"> An Auto Scaling group to recover from EC2 instance failures</div></div>
+
+<p>81. <br>
+For basic monitoring on AWS, which metrics are not included as part of the basic monitoring package? <br>
+<strong>Choose the 2 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> CPU utilization</div><div class="checklist-item"><input type="checkbox" checked="checked"> Free memory</div><div class="checklist-item"><input type="checkbox"> Network utilization</div><div class="checklist-item"><input type="checkbox" checked="checked"> Free swap</div></div>
+
+<p>82. <br>
+The KPL is an easy-to-use, highly-configurable library that helps you write to an Amazon Kinesis stream. It acts as an intermediary between your producer application code and the stream’s API actions. One of its key concepts is aggregation. Which of the following best describes aggregation as it relates to the KPL? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> It refers to batching multiple streams’ records and sending them in a single HTTP request with a call to the API operation PutRecords, instead of sending each stream’s record in its own HTTP request</div><div class="checklist-item"><input type="checkbox"> It is a blob of data that has particular meaning to the user. Examples include a JSON blob representing a UI event on a web site, or a log entry from a web server</div><div class="checklist-item"><input type="checkbox" checked="checked"> It refers to the storage of multiple records in a stream’s record and allows customers to increase the number of records sent per API call, which effectively increases producer throughput</div><div class="checklist-item"><input type="checkbox"> It refers to performing a single action on multiple items instead of repeatedly performing the action on each individual item</div></div>
+
+<p>83. <br>
+Your company is posting a big article on the front page of your website tomorrow. It is expected that the demand could potentially overwhelm your infrastructure. In the event of a load failure, how can you set up DNS failover to a static website? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Enable failover to an on-premises data center</div><div class="checklist-item"><input type="checkbox"> Duplicate the exact application architecture in another region and configure DNS latency-based routing</div><div class="checklist-item"><input type="checkbox" checked="checked"> Use Route 53 and the failover option to failover to a static S3 website bucket or CloudFront distribution in the event of an issue</div><div class="checklist-item"><input type="checkbox"> Build out additional capacity to ensure there is no scenario in which the application can fail</div></div>
+
+<p>84. <br>
+Which statements are true about Amazon S3? <br>
+Choose the 2 correct answers:</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Provides %99.99 durability to S3 objects</div><div class="checklist-item"><input type="checkbox"> Provides %99.999999999 availability to S3 objects</div><div class="checklist-item"><input type="checkbox" checked="checked"> Provides %99.999999999 durability to S3 objects</div><div class="checklist-item"><input type="checkbox" checked="checked"> Provides %99.99 availability to S3 objects</div></div>
+
+<p>85. <br>
+Your company requires that all the data on your EBS-backed EC2 volumes be encrypted. How would you go about doing this? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> You cannot enable EBS encryption on a specific volume</div><div class="checklist-item"><input type="checkbox" checked="checked"> AWS allows you to encrypt the file system on an EBS volume on EBS volume setup</div><div class="checklist-item"><input type="checkbox"> Encryption can be done on the OS layer of the EBS volume</div><div class="checklist-item"><input type="checkbox"> None of the above</div></div>
+
+<p>86. <br>
+Your AWS environment contains several reserved EC2 instances dedicated to a project that has just been cancelled. Your supervisor would like to recuperate cost for these reserved instances, but also does not want to lose the data just yet in case the project is revived next fiscal year. What can you do to minimize charges for these instances? <br>
+<strong>Choose the 2 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Take snapshots of the EBS volumes and terminate the instances</div><div class="checklist-item"><input type="checkbox"> Contact AWS and explain the situation</div><div class="checklist-item"><input type="checkbox" checked="checked"> Sell the instances on the AWS Reserved Instance Marketplace</div><div class="checklist-item"><input type="checkbox"> Stop the instances as soon as possible</div></div>
+
+<p>87. <br>
+An EC2 instance retrieves a message from an SQS queue, begins processing the message, then crashes. What happens to the message? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> To prevent data loss, it remains in the queue in a locked state until the EC2 instance comes back online</div><div class="checklist-item"><input type="checkbox" checked="checked"> When the message visibility timeout expires, the message becomes available for processing by other EC2 instances</div><div class="checklist-item"><input type="checkbox"> To prevent data corruption, if the EC2 instance does not respond to a customizable number of pings, the message is deleted</div><div class="checklist-item"><input type="checkbox"> To prevent data corruption, when the message hide timeout expires, the message is duplicated, the original message is archived, and the duplicate message becomes available for processing by other EC2 instances</div></div>
+
+<p>88. <br>
+After building an application that makes use of an Elastic Load Balancer over port 80, you notice that your instances, even though they are healthy as per the health check, are not serving traffic when you go to the ELB DNS cname. What might be the cause of this issue? <br>
+<strong>Choose the 2 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> The ELB security group does not have port 80 open</div><div class="checklist-item"><input type="checkbox"> There is no attached Internet gateway on the private subnet</div><div class="checklist-item"><input type="checkbox" checked="checked"> The EC2 instances security group does not have port 80 open</div><div class="checklist-item"><input type="checkbox"> The EC2 instances are part of a public subnet</div></div>
+
+<p>89. <br>
+When reviewing the Auto Scaling events, it is noticed that an application is scaling up and down multiple times within the hour. What design change could you make to optimize cost while preserving elasticity? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Add provisioned IOPS to the instances</div><div class="checklist-item"><input type="checkbox"> Change the scale down CloudWatch metric to a higher threshold</div><div class="checklist-item"><input type="checkbox"> Increase the instance type in the launch configuration</div><div class="checklist-item"><input type="checkbox"> Increase the base number of Auto Scaling instances for the Auto Scaling group</div></div>
+
+<p>90. <br>
+You are consulting for a company with a limited budget for on-premises hardware; however, they need to store large amounts of data that is easily accessible through a network share with on-premises employees. Which AWS solution would you implement for this company? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Configure Storage Gateway with gateway-stored volumes</div><div class="checklist-item"><input type="checkbox"> Configure S3 as a file system on a local on-premises server</div><div class="checklist-item"><input type="checkbox"> EC2 instances with large EBS volumes and a VPN from VPC to the on-premises network</div><div class="checklist-item"><input type="checkbox"> Configure Storage Gateway with gateway-cached volumes</div></div>
+
+<p>91. <br>
+In the basic monitoring package for EC2, Amazon CloudWatch provides the following metrics: <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Web service visible metrics, such as number failed transaction requests</div><div class="checklist-item"><input type="checkbox"> Operating system visible metrics, such as memory utilization</div><div class="checklist-item"><input type="checkbox"> Hypervisor visible metrics, such as CPU utilization</div><div class="checklist-item"><input type="checkbox"> Database memory usage</div></div>
+
+<p>92. <br>
+Your organization has been using an HSM (Hardware Security Module) for secure key storage. It is only used for generating keys for your EC2 instances. Unfortunately, the HSM has been zeroized after someone attempted to log in as the administrator three times using an invalid password. This means that the encryption keys on it have been wiped. You did not have a copy of the keys stored anywhere else. How can you obtain a new copy of the keys that you had stored on HSM? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> You can still connect via CLI; use the command ‘get-client-configuration’ and you can get a copy of the keys</div><div class="checklist-item"><input type="checkbox"> Contact AWS Support; your incident will be routed to the team that supports AWS - [ ] CloudHSM and a copy of the keys will be sent to you after verification</div><div class="checklist-item"><input type="checkbox"> Restore a snapshot of the HSM</div><div class="checklist-item"><input type="checkbox"> You cannot; the keys are lost if you did not have a copy.</div></div>
+
+<p>93. <br>
+Ten students have just been employed by your company for one week, and it is your task to provide them with access to AWS, through IAM. Your supervisor has come to you and said that he wants to be able to track these students as a group, rather than individually. Because of this, he has requested for them to all have the same login ID but completely different passwords. Which of the following is the best way to achieve this? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> It isn’t possible to have the same login ID for multiple IAM users of the same account</div><div class="checklist-item"><input type="checkbox"> Create a separate login ID, but give each IAM user the same alias so that each one can login with their alias</div><div class="checklist-item"><input type="checkbox"> Create various groups and add each user with the same login ID to different groups. The user can login with their own group ID</div><div class="checklist-item"><input type="checkbox"> Use Multi Factor Authentication to verify each user and they will all be able to use the same login</div></div>
+
+<p>94. <br>
+As part of your application architecture requirements, the company you are working for has requested the ability to run analytics against all combined log files from the Elastic Load Balancer. Which services are used together to collect logs and process log file analysis in an AWS environment? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Amazon DynamoDB to store the logs and EC2 for running custom log analysis scripts</div><div class="checklist-item"><input type="checkbox"> Amazon EC2 for storing and processing the log files</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon S3 for storing ELB log files and Amazon EMR for processing the log files in analysis</div><div class="checklist-item"><input type="checkbox"> Amazon S3 for storing the ELB log files and EC2 for processing the log files in analysis</div></div>
+
+<p>95. <br>
+Which of the following is not a legitimate concern? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Multi-AZ RDS deployments require a minimum of two subnets in a subnet group</div><div class="checklist-item"><input type="checkbox"> Databases typically should not be deployed on a public subnet</div><div class="checklist-item"><input type="checkbox"> Multi-AZ RDS deployments require at least two Availability Zones</div><div class="checklist-item"><input type="checkbox" checked="checked"> US-East-1 is does not support Multi-AZ RDS deployments.</div></div>
+
+<p>96. <br>
+Your EC2 instances are configured to run behind an Amazon VPC. You have assigned two web servers instances to an Elastic Load Balancer. However, the instances and the ELB are not reachable via URL to the elastic load balancer serving the web app data from the EC2 instances. How might you resolve the issue so that your instances are serving the web app data to the public Internet? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Attach an internet gateway to the VPC and route it to the subnet</div><div class="checklist-item"><input type="checkbox"> Add an elastic IP address to the instance</div><div class="checklist-item"><input type="checkbox"> Use Amazon Elastic Load Balancer to serve requests to your instances located in the  internal subnet</div><div class="checklist-item"><input type="checkbox"> None of the above</div></div>
+
+<p>97. <br>
+When a snapshot is being taken against an EBS volume, the volume becomes unavailable and the instance no longer has the ability to communicate with the EBS volume until the snapshot is complete. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> True</div><div class="checklist-item"><input type="checkbox" checked="checked"> False</div></div>
+
+<p>98. <br>
+Which of the following is not a benefit of a decoupled architecture using EC2, Auto Scaling, and SQS? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Auto Scaling can spin up new EC2 instances to handle an increased number of items in an SQS queue</div><div class="checklist-item"><input type="checkbox"> An application does not become unavailable due to the failure of a single EC2 instance</div><div class="checklist-item"><input type="checkbox" checked="checked"> An application does not become unavailable due to the deletion of a single SQS queue</div><div class="checklist-item"><input type="checkbox"> Unprocessed SQS messages are not lost due to the failure of a single EC2 instance</div></div>
+
+<p>99. <br>
+You are using IOT sensors to monitor the movement of a group of hikers on a three day trek and send the information into an Kinesis Stream. They each have a sensor in their shoe and you know for certain that there is no problem with mobile coverage so all the data is getting back to the stream. You have used default settings for the stream. At the end of the third day, the data is sent to an S3 bucket. When you go to interpret the data in S3 there is only data for the last day and nothing for the first 2 days. Which of the following is the most probable cause of this? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> You cannot send Kinesis data to the same bucket on consecutive days if you do not have versioning enabled on the bucket. If you don’t have versioning enabled you would need to define 3 different buckets or else the data is overwritten each day</div><div class="checklist-item"><input type="checkbox"> Temporary loss of mobile coverage; although mobile coverage was good in the area, even temporary loss of data will stop the streaming</div><div class="checklist-item"><input type="checkbox"> A sensor probably stopped working on the second day. If one sensor fails, no data is sent to the stream until that sensor is fixed</div><div class="checklist-item"><input type="checkbox" checked="checked"> Data records are only accessible for a default of 24 hours from the time they are added to a stream.</div></div>
+
+<p>100. <br>
+What is the difference between an Availability Zone and an edge location? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Edge locations are used as control stations for AWS resources</div><div class="checklist-item"><input type="checkbox"> An Availability Zone is a grouping of AWS resources in a specific region; an edge location is a specific resource within the AWS region</div><div class="checklist-item"><input type="checkbox"> An edge location is used as a link when building load balancing between regions</div><div class="checklist-item"><input type="checkbox" checked="checked"> An Availability Zone is an Amazon resource within an AWS region; an edge location will deliver cached content to the closest location to reduce latency</div></div>
+
+<p>101. <br>
+You are building a system to distribute confidential training videos to employees. Using CloudFront, what method would be used to serve content that is stored in S3 but not publicly accessible from S3 directly? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Add the CloudFront account security group</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create an Origin Access Identify (OAI) for CloudFront and grant access to the objects in your S3 bucket to that OAI</div><div class="checklist-item"><input type="checkbox"> Create a S3 bucket policy that lists the CloudFront distribution ID as the principal and the target bucket as the Amazon Resource Name (ARN)</div><div class="checklist-item"><input type="checkbox"> Create an Identity and Access Management (IAM) user for CloudFront and grant access to the objects in your S3 bucket to that IAM user.</div></div>
+
+<p>102. <br>
+Your supervisor asks you to create a decoupled application whose process includes dependencies on EC2 instances and servers located in your company’s on-premises datacenter. Which of these are you least likely to recommend as part of that process? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> SQS polling from an on-premises server using IAM user credentials</div><div class="checklist-item"><input type="checkbox"> SQS polling from an EC2 instance deployed with an IAM role</div><div class="checklist-item"><input type="checkbox" checked="checked"> SQS polling from an EC2 instance using IAM user credentials</div><div class="checklist-item"><input type="checkbox"> An SWF workflow</div></div>
+
+<p>103. <br>
+You recently purchased hardware to run a decoupled application in your on-premises datacenter. The application is working great, but has seen an increased workload in recent weeks that makes you concerned that your hardware cannot handle the load. Your supervisor asks you to analyze the possibility of expanding the application using cloud resources. You cannot completely migrate the application to AWS because of the investment you have already made in on-premises hardware. What items will most likely be included in your analysis? <br>
+<strong>Choose the 2 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> You can leverage SWF to utilize both on-premises servers and EC2 instances for your decoupled application</div><div class="checklist-item"><input type="checkbox"> SQS is not a valid option to help you use on-premises servers and EC2 instances in the same application, as it cannot be polled by on-premises servers</div><div class="checklist-item"><input type="checkbox"> SWF is not a valid option to help you use on-premises servers and EC2 instances in the same application, as on-premises servers cannot be used as activity task workers</div><div class="checklist-item"><input type="checkbox" checked="checked"> You can leverage SQS to utilize both on-premises servers and EC2 instances for your decoupled application</div></div>
+
+<p>104. <br>
+You are asked to evaluate a company’s AWS environment to find ways to reduce cost. You discover they are running three production web server reserved EC2 instances with EBS-backed root volumes. These instances have a consistent CPU load of 80%. Traffic is being distributed to these instances by an Elastic Load Balancer. They also have production and development Multi-AZ RDS MySQL databases. What recommendation would you make to reduce cost in this environment without affecting availability of mission-critical systems? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Consider using on-demand instances instead of reserved EC2 instances</div><div class="checklist-item"><input type="checkbox"> Consider not using a Multi-AZ RDS deployment for the development database</div><div class="checklist-item"><input type="checkbox"> Consider using spot instances instead of reserved EC2 instances</div><div class="checklist-item"><input type="checkbox"> Consider removing the Elastic Load Balancer</div></div>
+
+<p>105. <br>
+A colleague would like a new subnet configured in AWS for a database cluster she is building. She expects that the subnet will never need more than six IP addresses. Which of the following will likely be the most appropriate choice for this subnet? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> A /29 private subnet</div><div class="checklist-item"><input type="checkbox"> A /29 public subnet</div><div class="checklist-item"><input type="checkbox" checked="checked"> A /28 private subnet</div><div class="checklist-item"><input type="checkbox"> A /28 public subnet</div></div>
+
+<p>106. <br>
+You recently purchased and deployed four reserved EC2 instances in the US-East-1 region’s Availability Zone 1 for a new project. Your supervisor just informed you that this project only requires two EC2 instances. Rather than selling the reserved instances, she asked you to terminate the extra instances and convert two of the on-demand instances already running in Availability Zone 1 to reserved instances. Can this be done? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> No, it cannot be done</div><div class="checklist-item"><input type="checkbox" checked="checked"> Yes, you can terminate the reserved instances and AWS will automatically begin billing the two on-demand instances as reserved instances</div><div class="checklist-item"><input type="checkbox"> Yes, you can request this billing change through an AWS form</div><div class="checklist-item"><input type="checkbox"> Yes, you can terminate the on-demand instances and re-deploy them as reserved instances</div></div>
+
+<p>107. <br>
+You are consulting for a healthcare company that has strict compliance and auditing requirements. When architecting the application environment on AWS, which services or service features might you enable to take advantage of monitoring to ensure auditing the environment for compliance is easy and follows the strict healthcare compliance requirements? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Multi Factor Authentication</div><div class="checklist-item"><input type="checkbox"> S3 logging</div><div class="checklist-item"><input type="checkbox"> Encrypted data storage</div><div class="checklist-item"><input type="checkbox" checked="checked"> CloudTrail for security logs</div></div>
+
+<p>108. <br>
+You manage a web application on EC2 instances. Your website occasionally experiences brief but large spikes in traffic that cause your EC2 instances’ resources to become overwhelmed and the application to freeze up and lose recently-submitted requests from end users. You use Auto Scaling to deploy additional resources to handle the load during spikes, but the new instances do not deploy fast enough to prevent the existing application servers from freezing. Assuming you cannot find a pattern to when these spikes occur, which of the following is likely to provide the most cost-effective solution to avoid losing recently submitted requests? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Use an SQS queue to decouple the application components</div><div class="checklist-item"><input type="checkbox"> Use larger instances for your application</div><div class="checklist-item"><input type="checkbox"> Pre-warm your Elastic Load Balancer</div><div class="checklist-item"><input type="checkbox"> Keep one extra EC2 instance always powered on in case a spike occurs</div></div>
+
+<p>109. <br>
+Your company is concerned with EBS volume backups on Amazon EC2 and wants to ensure they have proper backups so that the data is durable. What solution would you implement and why? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Write a cronjob on the server that compresses the data that needs to be backed up using gzip compression, then use AWS CLI to copy the data into an S3 bucket for durability</div><div class="checklist-item"><input type="checkbox" checked="checked"> Write a cronjob that uses the AWS CLI to take a snapshot of production EBS volumes. - [ ] The data is durable because EBS snapshots are stored on the Amazon S3 standard storage class</div><div class="checklist-item"><input type="checkbox"> Use a lifecycle policy to back up EBS volumes stored on Amazon S3 for durability <br>
+Configure Amazon Storage Gateway with EBS volumes as the data source and store the backups on premise through the storage gateway</div></div>
+
+<p>110. <br>
+Amazon Auto Scaling is not meant to handle instant load spikes but is built to grow with a gradual increase in usage over a short time period. <br>
+Choose the correct answer:</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> True</div><div class="checklist-item"><input type="checkbox"> False</div></div></div></body></html>

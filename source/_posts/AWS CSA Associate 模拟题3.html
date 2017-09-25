@@ -1,0 +1,370 @@
+---
+title: AWS CSA Associate 模拟题3
+category: 云计算
+tag: AWS认证考试
+date: 2017-05-30
+---
+
+AWS是亚马逊公司开发的云计算服务，包括计算服务EC2，对象存储服务S3，关系数据库服务RDS等。由于AWS在整个行业的领先位置，学习AWS的云计算并通过认证无疑是了解整个云计算公有云服务特点的最佳选择。根据本人最近学习备考的经历，总结最后查漏补缺的模拟题，希望能够给同样计划备考AWS认证的同学提供些许帮助。
+
+<!--more-->
+
+<p>111. <br>
+Which is an operational process performed by AWS for data security? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> AES-256 encryption of data stored on any shared storage device</div><div class="checklist-item"><input type="checkbox" checked="checked"> Decommissioning of storage devices using industry-standard practices</div><div class="checklist-item"><input type="checkbox"> Background virus scans of EBS volumes and EBS snapshots</div><div class="checklist-item"><input type="checkbox"> Replication of data across multiple AWS Regions</div><div class="checklist-item"><input type="checkbox"> Secure wiping of EBS data when an EBS volume is unmounted</div></div>
+
+<p>112. <br>
+You have been tasked with creating a VPC network topology for your company. The VPC network must support both Internet-facing applications and internally-facing applications accessed only over VPN. Both Internet-facing and internally-facing applications must be able to leverage at least three AZs for high availability. At a minimum, how many subnets must you create within your VPC to accommodate these requirements? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> 2</div><div class="checklist-item"><input type="checkbox"> 3</div><div class="checklist-item"><input type="checkbox"> 4</div><div class="checklist-item"><input type="checkbox" checked="checked"> 6</div></div>
+
+<p>113. <br>
+You receive a Spot Instance at a bid of <span class="" rel="8cd9d4e74dc7b8d24d6bda24643ef804"><span class="MathJax_SVG" id="MathJax-Element-1-Frame" role="textbox" aria-readonly="true" style="font-size: 100%; display: inline-block;"><span><img type="image/png" width="387" height="18" longdesc="__SVG__undefined" src="data:image/png;base64,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" style="margin-top:0;margin-bottom:0;"></span></span></span>0.06/hr and your Spot Instance is terminated by AWS. What was the total EC2 compute cost of running your Spot Instance? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> $0.00</div><div class="checklist-item"><input type="checkbox"> $0.02</div><div class="checklist-item"><input type="checkbox"> $0.03</div><div class="checklist-item"><input type="checkbox"> $0.05</div><div class="checklist-item"><input type="checkbox"> $0.06</div></div>
+
+<p>114. <br>
+You are developing a highly available web application using stateless web servers. Which services are suitable for storing session state data? <br>
+<strong>Choose the 3 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Amazon CloudWatch</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon Relational Database Service (RDS)</div><div class="checklist-item"><input type="checkbox"> Elastic Load Balancing</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon ElastiCache</div><div class="checklist-item"><input type="checkbox"> AWS Storage Gateway</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon DynamoDB</div></div>
+
+<p>115. <br>
+You have a business-critical two-tier web app currently deployed in two AZs in a single region, using Elastic Load Balancing and Auto Scaling. The app depends on synchronous replication (very low latency connectivity) at the database layer. The application needs to remain fully available even if one application AZ goes off-line, and Auto Scaling cannot launch new instances in the remaining Availability Zones. How can the current architecture be enhanced to ensure this? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 50 percent peak load per Region.</div><div class="checklist-item"><input type="checkbox"> Deploy in two regions using Weighted Round Robin (WRR), with Auto Scaling minimums set for 100 percent peak load per region.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Deploy in three Availability Zones, with Auto Scaling minimum set to handle 50 percent peak load per zone.</div><div class="checklist-item"><input type="checkbox"> Deploy in three Availability Zones, with Auto Scaling minimum set to handle 33 percent peak load per zone.</div></div>
+
+<p>116. <br>
+You are deploying an application on EC2 that must call AWS APIs. What method of securely passing credentials to the application should you use? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Use AWS Identity and Access Management roles for EC2 instances.</div><div class="checklist-item"><input type="checkbox"> Pass API credentials to the instance using instance userdata.</div><div class="checklist-item"><input type="checkbox"> Embed the API credentials into your JAR files.</div><div class="checklist-item"><input type="checkbox"> Store API credentials as an object in Amazon Simple Storage Service.</div></div>
+
+<p>117. <br>
+Which route must be added to your routing table in order to allow connections to the Internet from your subnet? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Destination: 0.0.0.0/0 –&gt; Target: your Internet gateway</div><div class="checklist-item"><input type="checkbox"> Destination: 192.168.1.257/0 –&gt; Target: your Internet gateway</div><div class="checklist-item"><input type="checkbox"> Destination: 0.0.0.0/33 –&gt; Target: your virtual private gateway</div><div class="checklist-item"><input type="checkbox"> Destination: 0.0.0.0/0 –&gt; Target: 0.0.0.0/24</div><div class="checklist-item"><input type="checkbox"> Destination: 10.0.0.0/32 –&gt; Target: your virtual private gateway</div></div>
+
+<p>118. <br>
+A customer’s nightly EMR job processes a single 2-TB data file stored on Amazon Simple Storage Service (S3). The EMR job runs on two On-Demand core nodes and three On-Demand task nodes. Which of the following may help reduce the EMR job completion time? <br>
+<strong>Choose the 2 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Use three Spot Instances rather than three On-Demand instances for the task nodes.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Change the input split size in the MapReduce job configuration.</div><div class="checklist-item"><input type="checkbox"> Use a bootstrap action to present the S3 bucket as a local filesystem.</div><div class="checklist-item"><input type="checkbox"> Launch the core nodes and task nodes within an Amazon Virtual Cloud.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Adjust the number of simultaneous mapper tasks.</div><div class="checklist-item"><input type="checkbox"> Enable termination protection for the job flow.</div></div>
+
+<p>119. <br>
+You have an VPC with a public subnet. Three EC2 instances currently running inside the subnet can successfully communicate with other hosts on the internet. You launch a fourth instance in the same subnet, using the same AMI and security group configuration you used for the others, but find that this instance cannot be accessed from the Internet. What should you do to enable Internet access? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Deploy a NAT instance into the public subnet.</div><div class="checklist-item"><input type="checkbox"> Modify the routing table for the public subnet.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Assign an elastic IP address to the fourth instance.</div><div class="checklist-item"><input type="checkbox"> Configure a publicly routable IP address in the host OS of the fourth instance.</div></div>
+
+<p>120. <br>
+Which of the following requires a custom CloudWatch metric to monitor? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Memory use</div><div class="checklist-item"><input type="checkbox"> CPU use</div><div class="checklist-item"><input type="checkbox"> Disk read operations</div><div class="checklist-item"><input type="checkbox"> Network in</div><div class="checklist-item"><input type="checkbox"> Estimated charges</div></div>
+
+<p>121. <br>
+Which of the following is a durable key-value store? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon Simple Storage Service</div><div class="checklist-item"><input type="checkbox"> Amazon Simple Workflow Service</div><div class="checklist-item"><input type="checkbox"> Amazon Simple Queue Service</div><div class="checklist-item"><input type="checkbox"> Amazon Simple Notification Service</div></div>
+
+<p>122. <br>
+After creating a new AWS account, you use the API to request 40 on-demand EC2 instances in a single AZ. After 20 successful requests, subsequent requests failed. What could be a reason for this issue, and how would you resolve it? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> You encountered a soft limit of 20 instances per region. Submit the limit increase form and retry the failed requests once approved.</div><div class="checklist-item"><input type="checkbox"> AWS allows you to provision no more than 20 instances per Availability Zone. Select a different Availability Zone and retry the failed request.</div><div class="checklist-item"><input type="checkbox"> You need to use Amazon Virtual Private Cloud (VPC) in order to provision more than 20 instances in a single Availability Zone. Simply terminate the resources already provisioned and re-launch them all in a VPC.</div><div class="checklist-item"><input type="checkbox"> You encountered an API throttling situation and should try the failed requests using an exponential decay retry algorithm.</div></div>
+
+<p>123. <br>
+Amazon Glacier is designed for: <br>
+<strong>Choose the 2 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Frequently accessed data</div><div class="checklist-item"><input type="checkbox"> Active database storage</div><div class="checklist-item"><input type="checkbox" checked="checked"> Data archives</div><div class="checklist-item"><input type="checkbox" checked="checked"> Infrequently accessed data</div><div class="checklist-item"><input type="checkbox"> Cached session data</div></div>
+
+<p>124. <br>
+You have an application running in us-west-2 that requires six EC2 instances running at all times. With three AZs available in that region (us-west-2a, us-west-2b, and us-west-2c), which of the following deployments provides 100 percent fault tolerance if any single AZ in us-west-2 becomes unavailable? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Us-west-2a with two EC2 instances, us-west-2b with two EC2 instances, and us-west-2c with two EC2 instances</div><div class="checklist-item"><input type="checkbox"> Us-west-2a with three EC2 instances, us-west-2b with three EC2 instances, and us-west-2c with no EC2 instances</div><div class="checklist-item"><input type="checkbox"> Us-west-2a with four EC2 instances, us-west-2b with two EC2 instances, and us-west-2c with two EC2 instances</div><div class="checklist-item"><input type="checkbox" checked="checked"> Us-west-2a with six EC2 instances, us-west-2b with six EC2 instances, and us-west-2c with no EC2 instances</div><div class="checklist-item"><input type="checkbox" checked="checked"> Us-west-2a with three EC2 instances, us-west-2b with three EC2 instances, and us-west-2c with three EC2 instances</div></div>
+
+<p>125. <br>
+What action is required to establish a VPC VPN connection between an on-premises data center and an Amazon VPC virtual private gateway ? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Modify the main route table to allow traffic to a network address translation instance.</div><div class="checklist-item"><input type="checkbox"> Use a dedicated network address translation instance in the public subnet.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Assign a static Internet-routable IP address to an Amazon VPC customer gateway.</div><div class="checklist-item"><input type="checkbox"> Establish a dedicated networking connection using AWS Direct Connect.</div></div>
+
+<p>126. <br>
+How can software determine the public and private IP addresses of the EC2 instance that it is running on? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Query the local instance metadata.</div><div class="checklist-item"><input type="checkbox"> Query the local instance userdata.</div><div class="checklist-item"><input type="checkbox"> Query the appropriate Amazon CloudWatch metric.</div><div class="checklist-item"><input type="checkbox"> Use an ipconfig or ifconfig command.</div></div>
+
+<p>127. <br>
+A startup company hired you to help them build a mobile application, that will ultimately store billions of images and videos in S3. The company is lean on funding, and wants to minimize operational costs, however, they have an aggressive marketing plan, and expect to double their current installation base every six months. Due to the nature of their business, they are expecting sudden and large increases in traffic to and from S3, and need to ensure that it can handle the performance needs of their application. What other information must you gather from this customer in order to determine whether S3 is the right option? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> You must know how many customers the company has today, because this is critical in understanding what their customer base will be in two years.</div><div class="checklist-item"><input type="checkbox" checked="checked"> You must find out the total number of requests per second at peak usage.</div><div class="checklist-item"><input type="checkbox"> You must know the size of the individual objects being written to S3, in order to properly design the key namespace.</div><div class="checklist-item"><input type="checkbox"> In order to build the key namespace correctly, you must understand the total amount of storage needs for each S3 bucket.</div></div>
+
+<p>128. <br>
+You have an EC2 security group with several running EC2 instances. You change the security group rules to allow inbound traffic on a new port and protocol, and launch several new instances in the same security group. The new rules apply: <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Immediately to all instances in the security group.</div><div class="checklist-item"><input type="checkbox"> Immediately to the new instances only.</div><div class="checklist-item"><input type="checkbox"> Immediately to the new instances, but old instances must be stopped and restarted before the new rules apply.</div><div class="checklist-item"><input type="checkbox"> To all instances, but it may take several minutes for old instances to see the changes.</div></div>
+
+<p>129. <br>
+A VPC public subnet is one that: <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Has at least one route in its associated routing table that uses an Internet Gateway (IGW).</div><div class="checklist-item"><input type="checkbox"> Includes a route in its associated routing table via a Network Address Translation (NAT) instance.</div><div class="checklist-item"><input type="checkbox"> Has a Network Access Control List (NACL) permitting outbound traffic to 0.0.0.0/0.</div><div class="checklist-item"><input type="checkbox"> Has the Public Subnet option selected in its configuration.</div></div>
+
+<p>130. <br>
+In reviewing the Auto Scaling events for your application you notice that your application is scaling up and down multiple times in the same hour. What design choice could you make to optimize for cost while preserving elasticity? <br>
+<strong>Choose the 2 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Modify the Auto Scaling policy to use scheduled scaling actions</div><div class="checklist-item"><input type="checkbox"> Modify the Auto Scaling group termination policy to terminate the oldest instance first.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Modify the Auto Scaling group cool-down timers.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Modify the Amazon CloudWatch alarm period that triggers your Auto Scaling scale down policy.</div><div class="checklist-item"><input type="checkbox"> Modify the Auto Scaling group termination policy to terminate the newest instance first.</div></div>
+
+<p>131. <br>
+What combination of the following options will protect S3 objects from both accidental deletion and accidental overwriting? <br>
+<strong>Choose the 2 correct answers:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Enable S3 versioning on the bucket.</div><div class="checklist-item"><input type="checkbox"> Access S3 data using only signed URLs.</div><div class="checklist-item"><input type="checkbox"> Disable S3 delete using an IAM bucket policy.</div><div class="checklist-item"><input type="checkbox"> Enable S3 Reduced Redundancy Storage.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Enable multi-factor authentication (MFA) protected access.</div></div>
+
+<p>132. <br>
+What does Amazon S3 stand for? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Simple Storage Solution.</div><div class="checklist-item"><input type="checkbox"> Storage Storage Storage (triple redundancy Storage).</div><div class="checklist-item"><input type="checkbox"> Storage Server Solution.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Simple Storage Service.</div></div>
+
+<p>133. <br>
+You must assign each server to at least <strong>_</strong> security group <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> 3</div><div class="checklist-item"><input type="checkbox"> 2</div><div class="checklist-item"><input type="checkbox"> 4</div><div class="checklist-item"><input type="checkbox" checked="checked"> 1</div></div>
+
+<p>134. <br>
+Before I delete an EBS volume, what can I do if I want to recreate the volume later? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Create a copy of the EBS volume (not a snapshot)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Store a snapshot of the volume </div><div class="checklist-item"><input type="checkbox"> Download the content to an EC2 instance</div><div class="checklist-item"><input type="checkbox"> Back up the data in to a physical disk</div></div>
+
+<p>135, <br>
+Select the most correct answer: The device name /dev/sda1 (within Amazon EC2 ) is <strong>_</strong> <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Possible for EBS volumes</div><div class="checklist-item"><input type="checkbox" checked="checked"> Reserved for the root device </div><div class="checklist-item"><input type="checkbox"> Recommended for EBS volumes</div><div class="checklist-item"><input type="checkbox"> Recommended for instance store volumes</div></div>
+
+<p>136, <br>
+If I want an instance to have a public IP address, which IP address should I use? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Elastic IP Address </div><div class="checklist-item"><input type="checkbox"> Class B IP Address</div><div class="checklist-item"><input type="checkbox"> Class A IP Address</div><div class="checklist-item"><input type="checkbox"> Dynamic IP Address</div></div>
+
+<p>137. <br>
+What does RRS stand for when talking about S3? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Redundancy Removal System</div><div class="checklist-item"><input type="checkbox"> Relational Rights Storage</div><div class="checklist-item"><input type="checkbox"> Regional Rights Standard</div><div class="checklist-item"><input type="checkbox" checked="checked"> Reduced Redundancy Storage</div></div>
+
+<p>138. <br>
+All Amazon EC2 instances are assigned two IP addresses at launch. Which one can only be reached from within the Amazon EC2 network? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Multiple IP address</div><div class="checklist-item"><input type="checkbox"> Public IP address</div><div class="checklist-item"><input type="checkbox" checked="checked"> Private IP address </div><div class="checklist-item"><input type="checkbox"> Elastic IP Address</div></div>
+
+<p>139. <br>
+What does Amazon SWF stand for? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Simple Web Flow</div><div class="checklist-item"><input type="checkbox" checked="checked"> Simple Work Flow</div><div class="checklist-item"><input type="checkbox"> Simple Wireless Forms</div><div class="checklist-item"><input type="checkbox"> Simple Web Form</div></div>
+
+<p>140. <br>
+What is the Reduced Redundancy option in Amazon S3? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Less redundancy for a lower cost.</div><div class="checklist-item"><input type="checkbox"> It doesn’t exist in Amazon S3, but in Amazon EBS.</div><div class="checklist-item"><input type="checkbox"> It allows you to destroy any copy of your files outside a specific jurisdiction.</div><div class="checklist-item"><input type="checkbox"> It doesn’t exist at all</div></div>
+
+<p>141. <br>
+Fill in the blanks: Resources that are created in AWS are identified by a unique identifier called an <strong>_</strong>. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Amazon Resource Number</div><div class="checklist-item"><input type="checkbox"> Amazon Resource Name tag</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon Resource Name</div><div class="checklist-item"><input type="checkbox"> Amazon Reesource Namespace</div></div>
+
+<p>142. <br>
+What does the command ‘ec2-run-instances ami-e3a5408a -n 20 -g appserver’ do? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Start twenty instances as members of appserver group.</div><div class="checklist-item"><input type="checkbox"> Creates 20 rules in the security group named appserver</div><div class="checklist-item"><input type="checkbox"> Terminate twenty instances as members of appserver group.</div><div class="checklist-item"><input type="checkbox"> Start 20 security groups</div></div>
+
+<p>143. <br>
+While creating an Amazon RDS DB, your first task is to set up a DB <strong>__</strong> that controls what IP addresses or EC2 instances have access to your DB Instance. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Security Pool</div><div class="checklist-item"><input type="checkbox"> Secure Zone</div><div class="checklist-item"><input type="checkbox"> Security Token Pool</div><div class="checklist-item"><input type="checkbox" checked="checked"> Security Group</div></div>
+
+<p>144. <br>
+When you run a DB Instance as a Multi-AZ deployment, the <strong>_</strong> serves database writes and reads <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> secondary</div><div class="checklist-item"><input type="checkbox"> backup</div><div class="checklist-item"><input type="checkbox"> stand by</div><div class="checklist-item"><input type="checkbox" checked="checked"> primary</div></div>
+
+<p>145. <br>
+Every user you create in the IAM system starts with <strong>__</strong>. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> partial permissions</div><div class="checklist-item"><input type="checkbox"> full permissions</div><div class="checklist-item"><input type="checkbox" checked="checked"> no permissions</div></div>
+
+<p>146. <br>
+What does Amazon EC2 provide? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Virtual servers in the Cloud.</div><div class="checklist-item"><input type="checkbox"> A platform to run code (Java, PHP, Python), paying on an hourly basis.</div><div class="checklist-item"><input type="checkbox"> Computer Clusters in the Cloud.</div><div class="checklist-item"><input type="checkbox"> Physical servers, remotely managed by the customer.</div></div>
+
+<p>147. <br>
+Amazon SWF is designed to help users do what? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Design graphical user interface interactions</div><div class="checklist-item"><input type="checkbox"> Manage user identification and authorization</div><div class="checklist-item"><input type="checkbox"> Store Web content</div><div class="checklist-item"><input type="checkbox" checked="checked"> Coordinate synchronous and asynchronous tasks which are distributed and fault tolerant.</div></div>
+
+<p>148. <br>
+Can I control if and when MySQL based RDS Instance is upgraded to new supported versions? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> No</div><div class="checklist-item"><input type="checkbox"> Only in VPC</div><div class="checklist-item"><input type="checkbox" checked="checked"> Yes</div></div>
+
+<p>149. <br>
+If I modify a DB Instance or the DB parameter group associated with the instance, should I reboot the instance for the changes to take effect? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> No</div><div class="checklist-item"><input type="checkbox" checked="checked"> Yes</div></div>
+
+<p>150. <br>
+When you view the block device mapping for your instance, you can see only the EBS volumes, not the instance store volumes. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Depends on the instance type</div><div class="checklist-item"><input type="checkbox"> FALSE</div><div class="checklist-item"><input type="checkbox"> Depends on whether you use API call</div><div class="checklist-item"><input type="checkbox" checked="checked"> TRUE</div></div>
+
+<p>151. <br>
+By default, EBS volumes that are created and attached to an instance at launch are deleted when that instance is terminated. You can modify this behavior by changing the value of the flag <strong>_</strong> to false when you launch the instance. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> DeleteOnTermination</div><div class="checklist-item"><input type="checkbox"> RemoveOnDeletion</div><div class="checklist-item"><input type="checkbox"> RemoveOnTermination</div><div class="checklist-item"><input type="checkbox"> TerminateOnDeletion</div></div>
+
+<p>152. <br>
+What are the initial settings of an user created security group? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Allow all inbound traffic and Allow no outbound traffic</div><div class="checklist-item"><input type="checkbox"> Allow no inbound traffic and Allow no outbound traffic</div><div class="checklist-item"><input type="checkbox" checked="checked"> Allow no inbound traffic and Allow all outbound traffic</div><div class="checklist-item"><input type="checkbox"> Allow all inbound traffic and Allow all outbound traffic</div></div>
+
+<p>153. <br>
+Will my standby RDS instance be in the same Region as my primary? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Only for Oracle RDS types</div><div class="checklist-item"><input type="checkbox" checked="checked"> Yes </div><div class="checklist-item"><input type="checkbox"> Only if configured at launch</div><div class="checklist-item"><input type="checkbox"> No</div></div>
+
+<p>154. <br>
+What does Amazon Elastic Beanstalk provide? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> A scalable storage appliance on top of Amazon Web Services.</div><div class="checklist-item"><input type="checkbox" checked="checked"> An application container on top of Amazon Web Services.</div><div class="checklist-item"><input type="checkbox"> A service by this name doesn’t exist.</div><div class="checklist-item"><input type="checkbox"> A scalable cluster of EC2 instances.</div></div>
+
+<p>155. <br>
+When using IAM to control access to your RDS resources, the key names that can be used are case sensitive. For example, aws:CurrentTime is NOT equivalent to AWS:currenttime. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> TRUE </div><div class="checklist-item"><input type="checkbox"> FALSE</div></div>
+
+<p>156. <br>
+What will be the status of the snapshot until the snapshot is complete. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> running</div><div class="checklist-item"><input type="checkbox"> working</div><div class="checklist-item"><input type="checkbox"> progressing</div><div class="checklist-item"><input type="checkbox" checked="checked"> pending</div></div>
+
+<p>157. <br>
+Can an EBS volume be attached to more than one EC2 instance at the same time? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> No</div><div class="checklist-item"><input type="checkbox"> Yes.</div><div class="checklist-item"><input type="checkbox"> Only EC2-optimized EBS volumes.</div><div class="checklist-item"><input type="checkbox"> Only in read mode.</div></div>
+
+<p>158. <br>
+Automated backups are enabled by default for a new DB Instance. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> TRUE</div><div class="checklist-item"><input type="checkbox"> FALSE</div></div>
+
+<p>159. <br>
+What does the AWS Storage Gateway provide? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Integration of on-premises IT environments with Cloud Storage.</div><div class="checklist-item"><input type="checkbox"> A direct encrypted connection to Amazon S3.</div><div class="checklist-item"><input type="checkbox"> A backup solution that provides an on-premises Cloud storage.</div><div class="checklist-item"><input type="checkbox"> It provides an encrypted SSL endpoint for backups in the Cloud.</div></div>
+
+<p>160. <br>
+Amazon RDS automated backups and DB Snapshots are currently supported for only the <strong>__</strong> storage engine <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> InnoDB </div><div class="checklist-item"><input type="checkbox"> MyISAM</div></div>
+
+<p>161. <br>
+How many relational database engines does RDS currently support? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Six: Amazon Aurora, Oracle, Microsoft SQL Server, PostgreSQL, MySQL and MariaDB </div><div class="checklist-item"><input type="checkbox"> Just two: MySQL and Oracle.</div><div class="checklist-item"><input type="checkbox"> Five: MySQL, PostgreSQL, MongoDB, Cassandra and SQLite.</div><div class="checklist-item"><input type="checkbox"> Just one: MySQL.</div></div>
+
+<p>162. <br>
+Fill in the blanks: The base URI for all requests for instance metadata is <strong>_</strong> <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> <a href="http://254.169.169.254/latest/" target="_blank">http://254.169.169.254/latest/</a></div><div class="checklist-item"><input type="checkbox"> <a href="http://169.169.254.254/latest/" target="_blank">http://169.169.254.254/latest/</a></div><div class="checklist-item"><input type="checkbox"> <a href="http://127.0.0.1/latest/" target="_blank">http://127.0.0.1/latest/</a></div><div class="checklist-item"><input type="checkbox" checked="checked"> <a href="http://169.254.169.254/latest/" target="_blank">http://169.254.169.254/latest/</a></div></div>
+
+<p>163. <br>
+While creating the snapshots using the the command line tools, which command should I be using? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> ec2-deploy-snapshot</div><div class="checklist-item"><input type="checkbox"> ec2-fresh-snapshot</div><div class="checklist-item"><input type="checkbox" checked="checked"> ec2-create-snapshot </div><div class="checklist-item"><input type="checkbox"> ec2-new-snapshot</div></div>
+
+<p>164. <br>
+Typically, you want your application to check whether a request generated an error before you spend any time processing results. The easiest way to find out if an error occurred is to look for an <strong>__</strong> node in the response from the Amazon RDS API. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Incorrect</div><div class="checklist-item"><input type="checkbox" checked="checked"> Error</div><div class="checklist-item"><input type="checkbox"> FALSE</div></div>
+
+<p>165. <br>
+What are the two permission types used by AWS? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Resource-based and Product-based</div><div class="checklist-item"><input type="checkbox"> Product-based and Service-based</div><div class="checklist-item"><input type="checkbox"> Service-based</div><div class="checklist-item"><input type="checkbox" checked="checked"> User-based and Resource-based</div></div>
+
+<p>166. <br>
+In Amazon CloudWatch, which metric should I be checking to ensure that your DB Instance has enough free storage space? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> FreeStorage</div><div class="checklist-item"><input type="checkbox" checked="checked"> FreeStorageSpace </div><div class="checklist-item"><input type="checkbox"> FreeStorageVolume</div><div class="checklist-item"><input type="checkbox"> FreeDBStorageSpace</div></div>
+
+<p>167. <br>
+Amazon RDS DB snapshots and automated backups are stored in <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon S3 </div><div class="checklist-item"><input type="checkbox"> Amazon ECS Volume</div><div class="checklist-item"><input type="checkbox"> Amazon RDS</div><div class="checklist-item"><input type="checkbox"> Amazon EMR</div></div>
+
+<p>168. <br>
+What is the maximum key length of a tag? <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> 512 Unicode characters</div><div class="checklist-item"><input type="checkbox"> 64 Unicode characters</div><div class="checklist-item"><input type="checkbox"> 256 Unicode characters</div><div class="checklist-item"><input type="checkbox" checked="checked"> 128 Unicode characters</div></div>
+
+<p>169. <br>
+Security Groups can’t <strong>_</strong>. <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> be nested more than 3 levels</div><div class="checklist-item"><input type="checkbox" checked="checked"> be nested at all</div><div class="checklist-item"><input type="checkbox"> be nested more than 4 levels</div><div class="checklist-item"><input type="checkbox"> be nested more than 2 levels</div></div>
+
+<p>170. <br>
+You must increase storage size in increments of at least <strong>_</strong> % <br>
+<strong>Choose the correct answer:</strong></p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> 40</div><div class="checklist-item"><input type="checkbox"> 20</div><div class="checklist-item"><input type="checkbox"> 50</div><div class="checklist-item"><input type="checkbox" checked="checked"> 10</div></div></div></body></html>

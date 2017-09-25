@@ -7,6 +7,7 @@ date: 2017-04-05
 > Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications that you can "just run". We take an opinionated view of the Spring platform and third-party libraries so you can get started with minimum fuss. Most Spring Boot applications need very little Spring configuration.
 Spring Boot让你更容易地创建“仅仅运行”就可以的独立，产品级的基于Spring的应用。
 
+<!--more-->
 特点：
 - 创建独立的Spring应用
 - 直接内嵌Tomcat，Jetty或者Undertow

@@ -1,0 +1,450 @@
+---
+title: AWS CSA Associate 模拟题9
+category: 云计算
+tag: AWS认证考试
+date: 2017-08-15
+---
+
+AWS是亚马逊公司开发的云计算服务，包括计算服务EC2，对象存储服务S3，关系数据库服务RDS等。由于AWS在整个行业的领先位置，学习AWS的云计算并通过认证无疑是了解整个云计算公有云服务特点的最佳选择。根据本人最近学习备考的经历，总结最后查漏补缺的模拟题，希望能够给同样计划备考AWS认证的同学提供些许帮助。
+
+<!--more-->
+
+<p>544. <br>
+Which of the following are valid statements about Amazon S3? Choose 2 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> S3 provides read-after-write consistency for any type of PUT or DELETE.</div><div class="checklist-item"><input type="checkbox"> Consistency is not guaranteed for any type of PUT or DELETE.</div><div class="checklist-item"><input type="checkbox" checked="checked"> A successful response to a PUT request only occurs when a complete object is saved</div><div class="checklist-item"><input type="checkbox"> Partially saved objects are immediately readable with a GET after an overwrite PUT.</div><div class="checklist-item"><input type="checkbox" checked="checked"> S3 provides eventual consistency for overwrite PUTS and DELETES</div></div>
+
+<p>545. <br>
+A customer is leveraging Amazon Simple Storage Service in eu-west-1 to store static content for web-based property. The customer is storing objects using the Standard Storage class. Where are the customers’ objects replicated?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Single facility in eu-west-1 and a single facility in eu-central-1</div><div class="checklist-item"><input type="checkbox"> Single facility in eu-west-1 and a single facility in us-east-1</div><div class="checklist-item"><input type="checkbox" checked="checked"> Multiple facilities in eu-west-1</div><div class="checklist-item"><input type="checkbox"> A single facility in eu-west-1</div></div>
+
+<p>546. <br>
+A user has an S3 object in the US Standard region with the content “color=red”. The user updates the object with the content as “color=”white”. If the user tries to read the value 1 minute after it was uploaded, what will S3 return?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> It will return “color=white”</div><div class="checklist-item"><input type="checkbox"> It will return “color=red”</div><div class="checklist-item"><input type="checkbox"> It will return an error saying that the object was not found</div><div class="checklist-item"><input type="checkbox" checked="checked"> It may return either “color=red” or “color=white” i.e. any of the value (Eventual Consistency)</div></div>
+
+<p>547. <br>
+An organization’s security policy requires multiple copies of all critical data to be replicated across at least a primary and backup data center. The organization has decided to store some critical data on Amazon S3. Which option should you implement to ensure this requirement is met?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Use the S3 copy API to replicate data between two S3 buckets in different regions</div><div class="checklist-item"><input type="checkbox"> You do not need to implement anything since S3 data is automatically replicated between regions</div><div class="checklist-item"><input type="checkbox"> Use the S3 copy API to replicate data between two S3 buckets in different facilities within an AWS Region</div><div class="checklist-item"><input type="checkbox" checked="checked"> You do not need to implement anything since S3 data is automatically replicated between multiple facilities within an AWS Region</div></div>
+
+<p>548. <br>
+A customer wants to track access to their Amazon Simple Storage Service (S3) buckets and also use this information for their internal security and access audits. Which of the following will meet the Customer requirement?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Enable AWS CloudTrail to audit all Amazon S3 bucket access.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Enable server access logging for all required Amazon S3 buckets</div><div class="checklist-item"><input type="checkbox"> Enable the Requester Pays option to track access via AWS Billing</div><div class="checklist-item"><input type="checkbox"> Enable Amazon S3 event notifications for Put and Post.</div></div>
+
+<p>549. <br>
+A user is enabling a static website hosting on an S3 bucket. Which of the below mentioned parameters cannot be configured by the user?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Error document</div><div class="checklist-item"><input type="checkbox" checked="checked"> Conditional error on object name</div><div class="checklist-item"><input type="checkbox"> Index document</div><div class="checklist-item"><input type="checkbox"> Conditional redirection on object name</div></div>
+
+<p>560. <br>
+Company ABCD is running their corporate website on Amazon S3 accessed from http//www.companyabcd.com. Their marketing team has published new web fonts to a separate S3 bucket accessed by the S3 endpoint: <a href="https://s3-us-west1.amazonaws.com/abcdfonts" target="_blank">https://s3-us-west1.amazonaws.com/abcdfonts</a>. While testing the new web fonts, Company ABCD recognized the web fonts are being blocked by the browser. What should Company ABCD do to prevent the web fonts from being blocked by the browser?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Enable versioning on the abcdfonts bucket for each web font</div><div class="checklist-item"><input type="checkbox"> Create a policy on the abcdfonts bucket to enable access to everyone</div><div class="checklist-item"><input type="checkbox"> Add the Content-MD5 header to the request for webfonts in the abcdfonts bucket from the website</div><div class="checklist-item"><input type="checkbox" checked="checked"> Configure the abcdfonts bucket to allow cross-origin requests by creating a CORS configuration</div></div>
+
+<p>551. <br>
+Company ABCD is currently hosting their corporate site in an Amazon S3 bucket with Static Website Hosting enabled. Currently, when visitors go to <a href="http://www.companyabcd.com" target="_blank">http://www.companyabcd.com</a> the index.html page is returned. Company C now would like a new page welcome.html to be returned when a visitor enters <a href="http://www.companyabcd.com" target="_blank">http://www.companyabcd.com</a> in the browser. Which of the following steps will allow Company ABCD to meet this requirement? Choose 2 answers.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Upload an html page named welcome.html to their S3 bucket</div><div class="checklist-item"><input type="checkbox"> Create a welcome subfolder in their S3 bucket</div><div class="checklist-item"><input type="checkbox" checked="checked"> Set the Index Document property to welcome.html</div><div class="checklist-item"><input type="checkbox"> Move the index.html page to a welcome subfolder</div><div class="checklist-item"><input type="checkbox"> Set the Error Document property to welcome.html</div></div>
+
+<p>552. <br>
+What does RRS stand for when talking about S3?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Redundancy Removal System</div><div class="checklist-item"><input type="checkbox"> Relational Rights Storage</div><div class="checklist-item"><input type="checkbox"> Regional Rights Standard</div><div class="checklist-item"><input type="checkbox" checked="checked"> Reduced Redundancy Storage</div></div>
+
+<p>553. <br>
+What is the durability of S3 RRS?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> 99.99%</div><div class="checklist-item"><input type="checkbox"> 99.95%</div><div class="checklist-item"><input type="checkbox"> 99.995%</div><div class="checklist-item"><input type="checkbox"> 99.999999999%</div></div>
+
+<p>554. <br>
+What is the Reduced Redundancy option in Amazon S3?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Less redundancy for a lower cost</div><div class="checklist-item"><input type="checkbox"> It doesn’t exist in Amazon S3, but in Amazon EBS.</div><div class="checklist-item"><input type="checkbox"> It allows you to destroy any copy of your files outside a specific jurisdiction.</div><div class="checklist-item"><input type="checkbox"> It doesn’t exist at all</div></div>
+
+<p>555. <br>
+An application is generating a log file every 5 minutes. The log file is not critical but may be required only for verification in case of some major issue. The file should be accessible over the internet whenever required. Which of the below mentioned options is a best possible storage solution for it?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> AWS S3</div><div class="checklist-item"><input type="checkbox"> AWS Glacier</div><div class="checklist-item"><input type="checkbox"> AWS RDS</div><div class="checklist-item"><input type="checkbox" checked="checked"> AWS S3 RRS (Reduced Redundancy Storage (RRS) is an Amazon S3 storage option that enables customers to store noncritical, reproducible data at lower levels of redundancy than Amazon S3’s standard storage. RRS is designed to sustain the loss of data in a single facility.)</div></div>
+
+<p>556.* <br>
+A user has moved an object to Glacier using the life cycle rules. The user requests to restore the archive after 6 months. When the restore request is completed the user accesses that archive. Which of the below mentioned statements is not true in this condition?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The archive will be available as an object for the duration specified by the user during the restoration request</div><div class="checklist-item"><input type="checkbox" checked="checked"> The restored object’s storage class will be RRS (After the object is restored the storage class still remains GLACIER. Read more)</div><div class="checklist-item"><input type="checkbox"> The user can modify the restoration period only by issuing a new restore request with the updated period</div><div class="checklist-item"><input type="checkbox"> The user needs to pay storage for both RRS (restored) and Glacier (Archive) Rates</div></div>
+
+<p>567. <br>
+Which of the below mentioned options can be a good use case for storing content in AWS RRS?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Storing mission critical data Files</div><div class="checklist-item"><input type="checkbox"> Storing infrequently used log files</div><div class="checklist-item"><input type="checkbox"> Storing a video file which is not reproducible</div><div class="checklist-item"><input type="checkbox" checked="checked"> Storing image thumbnails</div></div>
+
+<p>568. <br>
+Which set of Amazon S3 features helps to prevent and recover from accidental data loss?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Object lifecycle and service access logging</div><div class="checklist-item"><input type="checkbox" checked="checked"> Object versioning and Multi-factor authentication</div><div class="checklist-item"><input type="checkbox"> Access controls and server-side encryption</div><div class="checklist-item"><input type="checkbox"> Website hosting and Amazon S3 policies</div></div>
+
+<p>569. <br>
+You use S3 to store critical data for your company Several users within your group currently have full permissions to your S3 buckets. You need to come up with a solution that does not impact your users and also protect against the accidental deletion of objects. Which two options will address this issue? Choose 2 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Enable versioning on your S3 Buckets</div><div class="checklist-item"><input type="checkbox" checked="checked"> Configure your S3 Buckets with MFA delete</div><div class="checklist-item"><input type="checkbox"> Create a Bucket policy and only allow read only permissions to all users at the bucket level</div><div class="checklist-item"><input type="checkbox"> Enable object life cycle policies and configure the data older than 3 months to be archived in Glacier</div></div>
+
+<p>570. <br>
+To protect S3 data from both accidental deletion and accidental overwriting, you should</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> enable S3 versioning on the bucket</div><div class="checklist-item"><input type="checkbox"> access S3 data using only signed URLs</div><div class="checklist-item"><input type="checkbox"> disable S3 delete using an IAM bucket policy</div><div class="checklist-item"><input type="checkbox"> enable S3 Reduced Redundancy Storage</div><div class="checklist-item"><input type="checkbox"> enable Multi-Factor Authentication (MFA) protected access</div></div>
+
+<p>571. <br>
+A user has not enabled versioning on an S3 bucket. What will be the version ID of the object inside that bucket?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> 0</div><div class="checklist-item"><input type="checkbox"> There will be no version attached</div><div class="checklist-item"><input type="checkbox" checked="checked"> Null</div><div class="checklist-item"><input type="checkbox"> Blank</div></div>
+
+<p>572. <br>
+A user is trying to find the state of an S3 bucket with respect to versioning. Which of the below mentioned states AWS will not return when queried?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> versioning-enabled</div><div class="checklist-item"><input type="checkbox"> versioning-suspended</div><div class="checklist-item"><input type="checkbox"> unversioned</div><div class="checklist-item"><input type="checkbox" checked="checked"> versioned</div></div>
+
+<p>573. <br>
+Your firm has uploaded a large amount of aerial image data to S3. In the past, in your on-premises environment, you used a dedicated group of servers to oaten process this data and used Rabbit MQ, an open source messaging system, to get job information to the servers. Once processed the data would go to tape and be shipped offsite. Your manager told you to stay with the current design, and leverage AWS archival storage and messaging services to minimize cost. Which is correct?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Use SQS for passing job messages, use Cloud Watch alarms to terminate EC2 worker instances when they become idle. Once data is processed, change the storage class of the S3 objects to Reduced Redundancy Storage (Need to replace On-Premises Tape functionality)</div><div class="checklist-item"><input type="checkbox"> Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SQS. Once data is processed, change the storage class of the S3 objects to Reduced Redundancy Storage (Need to replace On-Premises Tape functionality)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Setup Auto-Scaled workers triggered by queue depth that use spot instances to process messages in SQS. Once data is processed, change the storage class of the S3 objects to Glacier (Glacier suitable for Tape backup)</div><div class="checklist-item"><input type="checkbox"> Use SNS to pass job messages use Cloud Watch alarms to terminate spot worker instances when they become idle. Once data is processed, change the storage class of the S3 object to Glacier.</div></div>
+
+<p>574. <br>
+You have a proprietary data store on-premises that must be backed up daily by dumping the data store contents to a single compressed 50GB file and sending the file to AWS. Your SLAs state that any dump file backed up within the past 7 days can be retrieved within 2 hours. Your compliance department has stated that all data must be held indefinitely. The time required to restore the data store from a backup is approximately 1 hour. Your on-premise network connection is capable of sustaining 1gbps to AWS. Which backup methods to AWS would be most cost-effective while still meeting all of your requirements?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Send the daily backup files to Glacier immediately after being generated (will not meet the RTO)</div><div class="checklist-item"><input type="checkbox"> Transfer the daily backup files to an EBS volume in AWS and take daily snapshots of the volume (Not cost effective)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Transfer the daily backup files to S3 and use appropriate bucket lifecycle policies to send to Glacier (Store in S3 for seven days and then archive to Glacier)</div><div class="checklist-item"><input type="checkbox"> Host the backup files on a Storage Gateway with Gateway-Cached Volumes and take daily snapshots (Not Cost effective as local storage as well as S3 storage)</div></div>
+
+<p>575. <br>
+Which features can be used to restrict access to data in S3? Choose 2 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Set an S3 ACL on the bucket or the object.</div><div class="checklist-item"><input type="checkbox"> Create a CloudFront distribution for the bucket.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Set an S3 bucket policy.</div><div class="checklist-item"><input type="checkbox"> Enable IAM Identity Federation</div><div class="checklist-item"><input type="checkbox"> Use S3 Virtual Hosting</div></div>
+
+<p>576. <br>
+Which method can be used to prevent an IP address block from accessing public objects in an S3 bucket?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Create a bucket policy and apply it to the bucket</div><div class="checklist-item"><input type="checkbox"> Create a NACL and attach it to the VPC of the bucket</div><div class="checklist-item"><input type="checkbox"> Create an ACL and apply it to all objects in the bucket</div><div class="checklist-item"><input type="checkbox"> Modify the IAM policies of any users that would access the bucket</div></div>
+
+<p>577. <br>
+A user has granted read/write permission of his S3 bucket using ACL. Which of the below mentioned options is a valid ID to grant permission to other AWS accounts (grantee. using ACL?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> IAM User ID</div><div class="checklist-item"><input type="checkbox"> S3 Secure ID</div><div class="checklist-item"><input type="checkbox"> Access ID</div><div class="checklist-item"><input type="checkbox" checked="checked"> Canonical user ID</div></div>
+
+<p>578. <br>
+A root account owner has given full access of his S3 bucket to one of the IAM users using the bucket ACL. When the IAM user logs in to the S3 console, which actions can he perform?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> He can just view the content of the bucket</div><div class="checklist-item"><input type="checkbox"> He can do all the operations on the bucket</div><div class="checklist-item"><input type="checkbox" checked="checked"> It is not possible to give access to an IAM user using ACL</div><div class="checklist-item"><input type="checkbox"> The IAM user can perform all operations on the bucket using only API/SDK</div></div>
+
+<p>579. <br>
+A root AWS account owner is trying to understand various options to set the permission to AWS S3. Which of the below mentioned options is not the right option to grant permission for S3?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> User Access Policy</div><div class="checklist-item"><input type="checkbox"> S3 Object Policy</div><div class="checklist-item"><input type="checkbox"> S3 Bucket Policy</div><div class="checklist-item"><input type="checkbox"> S3 ACL</div></div>
+
+<p>580.* <br>
+A system admin is managing buckets, objects and folders with AWS S3. Which of the below mentioned statements is true and should be taken in consideration by the sysadmin?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Folders support only ACL</div><div class="checklist-item"><input type="checkbox"> Both the object and bucket can have an Access Policy but folder cannot have policy</div><div class="checklist-item"><input type="checkbox"> Folders can have a policy</div><div class="checklist-item"><input type="checkbox" checked="checked"> Both the object and bucket can have ACL but folders cannot have ACL</div></div>
+
+<p>581.* <br>
+A user has created an S3 bucket which is not publicly accessible. The bucket is having thirty objects which are also private. If the user wants to make the objects public, how can he configure this with minimal efforts?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> User should select all objects from the console and apply a single policy to mark them public</div><div class="checklist-item"><input type="checkbox"> User can write a program which programmatically makes all objects public using S3 SDK</div><div class="checklist-item"><input type="checkbox" checked="checked"> Set the AWS bucket policy which marks all objects as public</div><div class="checklist-item"><input type="checkbox"> Make the bucket ACL as public so it will also mark all objects as public</div></div>
+
+<p>582. <br>
+You need to configure an Amazon S3 bucket to serve static assets for your public-facing web application. Which methods ensure that all objects uploaded to the bucket are set to public read? Choose 2 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Set permissions on the object to public read during upload.</div><div class="checklist-item"><input type="checkbox"> Configure the bucket ACL to set all objects to public read.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Configure the bucket policy to set all objects to public read.</div><div class="checklist-item"><input type="checkbox"> Use AWS Identity and Access Management roles to set the bucket to public read.</div><div class="checklist-item"><input type="checkbox"> Amazon S3 objects default to public read, so no action is needed.</div></div>
+
+<p>583. <br>
+Amazon S3 doesn’t automatically give a user who creates <strong>_</strong> permission to perform other actions on that bucket or object.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> a file</div><div class="checklist-item"><input type="checkbox" checked="checked"> a bucket or object</div><div class="checklist-item"><input type="checkbox"> a bucket or file</div><div class="checklist-item"><input type="checkbox"> a object or file</div></div>
+
+<p>584. <br>
+A root account owner is trying to understand the S3 bucket ACL. Which of the below mentioned options cannot be used to grant ACL on the object using the authorized predefined group?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Authenticated user group</div><div class="checklist-item"><input type="checkbox"> All users group</div><div class="checklist-item"><input type="checkbox"> Log Delivery Group</div><div class="checklist-item"><input type="checkbox" checked="checked"> Canonical user group</div></div>
+
+<p>585.* <br>
+A user is enabling logging on a particular bucket. Which of the below mentioned options may be best suitable to allow access to the log bucket?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Create an IAM policy and allow log access</div><div class="checklist-item"><input type="checkbox"> It is not possible to enable logging on the S3 bucket</div><div class="checklist-item"><input type="checkbox"> Create an IAM Role, which has access to the log bucket</div><div class="checklist-item"><input type="checkbox" checked="checked"> Provide ACL for the logging group</div></div>
+
+<p>586.* <br>
+A user is trying to configure access with S3. Which of the following options is not possible to provide access to the S3 bucket / object?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Define the policy for the IAM user</div><div class="checklist-item"><input type="checkbox"> Define the ACL for the object</div><div class="checklist-item"><input type="checkbox" checked="checked"> Define the policy for the object</div><div class="checklist-item"><input type="checkbox"> Define the policy for the bucket</div></div>
+
+<p>587. <br>
+A user is having access to objects of an S3 bucket, which is not owned by him. If he is trying to set the objects of that bucket public, which of the below mentioned options may be a right fit for this action?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Make the bucket public with full access</div><div class="checklist-item"><input type="checkbox"> Define the policy for the bucket</div><div class="checklist-item"><input type="checkbox" checked="checked"> Provide ACL on the object</div><div class="checklist-item"><input type="checkbox"> Create an IAM user with permission</div></div>
+
+<p>488. <br>
+A bucket owner has allowed another account’s IAM users to upload or access objects in his bucket. The IAM user of Account A is trying to access an object created by the IAM user of account B. What will happen in this scenario?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The bucket policy may not be created as S3 will give error due to conflict of Access Rights</div><div class="checklist-item"><input type="checkbox"> It is not possible to give permission to multiple IAM users</div><div class="checklist-item"><input type="checkbox" checked="checked"> AWS S3 will verify proper rights given by the owner of Account A, the bucket owner as well as by the IAM user B to the object</div><div class="checklist-item"><input type="checkbox"> It is not possible that the IAM user of one account accesses objects of the other IAM user</div></div>
+
+<p>589. <br>
+A company is storing data on Amazon Simple Storage Service (S3). The company’s security policy mandates that data is encrypted at rest. Which of the following methods can achieve this? Choose 3 answers</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Use Amazon S3 server-side encryption with AWS Key Management Service managed keys</div><div class="checklist-item"><input type="checkbox" checked="checked"> Use Amazon S3 server-side encryption with customer-provided keys</div><div class="checklist-item"><input type="checkbox"> Use Amazon S3 server-side encryption with EC2 key pair.</div><div class="checklist-item"><input type="checkbox"> Use Amazon S3 bucket policies to restrict access to the data at rest.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Encrypt the data on the client-side before ingesting to Amazon S3 using their own master key</div><div class="checklist-item"><input type="checkbox"> Use SSL to encrypt the data while in transit to Amazon S3.</div></div>
+
+<p>490. <br>
+A user has enabled versioning on an S3 bucket. The user is using server side encryption for data at Rest. If the user is supplying his own keys for encryption (SSE-C) which of the below mentioned statements is true?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The user should use the same encryption key for all versions of the same object</div><div class="checklist-item"><input type="checkbox" checked="checked"> It is possible to have different encryption keys for different versions of the same object</div><div class="checklist-item"><input type="checkbox"> AWS S3 does not allow the user to upload his own keys for server side encryption</div><div class="checklist-item"><input type="checkbox"> The SSE-C does not work when versioning is enabled</div></div>
+
+<p>591. <br>
+A storage admin wants to encrypt all the objects stored in S3 using server side encryption. The user does not want to use the AES 256 encryption key provided by S3. How can the user achieve this?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The admin should upload his secret key to the AWS console and let S3 decrypt the objects</div><div class="checklist-item"><input type="checkbox"> The admin should use CLI or API to upload the encryption key to the S3 bucket. When making a call to the S3 API mention the encryption key URL in each request</div><div class="checklist-item"><input type="checkbox"> S3 does not support client supplied encryption keys for server side encryption</div><div class="checklist-item"><input type="checkbox" checked="checked"> The admin should send the keys and encryption algorithm with each API call</div></div>
+
+<p>492. <br>
+A user has enabled versioning on an S3 bucket. The user is using server side encryption for data at rest. If the user is supplying his own keys for encryption (SSE-C), what is recommended to the user for the purpose of security?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> User should not use his own security key as it is not secure</div><div class="checklist-item"><input type="checkbox"> Configure S3 to rotate the user’s encryption key at regular intervals</div><div class="checklist-item"><input type="checkbox"> Configure S3 to store the user’s keys securely with SSL</div><div class="checklist-item"><input type="checkbox" checked="checked"> Keep rotating the encryption key manually at the client side</div></div>
+
+<p>593. <br>
+A system admin is planning to encrypt all objects being uploaded to S3 from an application. The system admin does not want to implement his own encryption algorithm; instead he is planning to use server side encryption by supplying his own key (SSE-C.. Which parameter is not required while making a call for SSE-C?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> x-amz-server-side-encryption-customer-key-AES-256</div><div class="checklist-item"><input type="checkbox"> x-amz-server-side-encryption-customer-key</div><div class="checklist-item"><input type="checkbox"> x-amz-server-side-encryption-customer-algorithm</div><div class="checklist-item"><input type="checkbox"> x-amz-server-side-encryption-customer-key-MD5</div></div>
+
+<p>594. <br>
+A customer is leveraging Amazon Simple Storage Service in eu-west-1 to store static content for a web-based property. The customer is storing objects using the Standard Storage class. Where are the customers objects replicated?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> A single facility in eu-west-1 and a single facility in eu-central-1</div><div class="checklist-item"><input type="checkbox"> A single facility in eu-west-1 and a single facility in us-east-1</div><div class="checklist-item"><input type="checkbox" checked="checked"> Multiple facilities in eu-west-1</div><div class="checklist-item"><input type="checkbox"> A single facility in eu-west-1</div></div>
+
+<p>595. <br>
+You are designing a personal document-archiving solution for your global enterprise with thousands of employee. Each employee has potentially gigabytes of data to be backed up in this archiving solution. The solution will be exposed to he employees as an application, where they can just drag and drop their files to the archiving system. Employees can retrieve their archives through a web interface. The corporate network has high bandwidth AWS DirectConnect connectivity to AWS. You have regulatory requirements that all data needs to be encrypted before being uploaded to the cloud. How do you implement this in a highly available and cost efficient way?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Manage encryption keys on-premise in an encrypted relational database. Set up an on-premises server with sufficient storage to temporarily store files and then upload them to Amazon S3, providing a client-side master key. (Storing temporary increases cost and not a high availability option)</div><div class="checklist-item"><input type="checkbox"> Manage encryption keys in a Hardware Security Module(HSM) appliance on-premise server with sufficient storage to temporarily store, encrypt, and upload files directly into amazon Glacier. (Not cost effective)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Manage encryption keys in amazon Key Management Service (KMS), upload to amazon simple storage service (s3) with client-side encryption using a KMS customer master key ID and configure Amazon S3 lifecycle policies to store each object using the amazon glacier storage tier. (with CSE-KMS the encryption happens at client side before the object is upload to S3 and KMS is cost effective as well)</div><div class="checklist-item"><input type="checkbox"> Manage encryption keys in an AWS CloudHSM appliance. Encrypt files prior to uploading on the employee desktop and then upload directly into amazon glacier (Not cost effective)</div></div>
+
+<p>496. <br>
+A user has enabled server side encryption with S3. The user downloads the encrypted object from S3. How can the user decrypt it?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> S3 does not support server side encryption</div><div class="checklist-item"><input type="checkbox"> S3 provides a server side key to decrypt the object</div><div class="checklist-item"><input type="checkbox"> The user needs to decrypt the object using their own private key</div><div class="checklist-item"><input type="checkbox" checked="checked"> S3 manages encryption and decryption automatically</div></div>
+
+<p>597. <br>
+When uploading an object, what request header can be explicitly specified in a request to Amazon S3 to encrypt object data when saved on the server side?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> x-amz-storage-class</div><div class="checklist-item"><input type="checkbox"> Content-MD5</div><div class="checklist-item"><input type="checkbox"> x-amz-security-token</div><div class="checklist-item"><input type="checkbox" checked="checked"> x-amz-server-side-encryption</div></div>
+
+<p>498. <br>
+A media company produces new video files on-premises every day with a total size of around 100GB after compression. All files have a size of 1-2 GB and need to be uploaded to Amazon S3 every night in a fixed time window between 3am and 5am. Current upload takes almost 3 hours, although less than half of the available bandwidth is used. What step(s) would ensure that the file uploads are able to complete in the allotted time window?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Increase your network bandwidth to provide faster throughput to S3</div><div class="checklist-item"><input type="checkbox" checked="checked"> Upload the files in parallel to S3 using multipart upload</div><div class="checklist-item"><input type="checkbox"> Pack all files into a single archive, upload it to S3, then extract the files in AWS</div><div class="checklist-item"><input type="checkbox"> Use AWS Import/Export to transfer the video files</div></div>
+
+<p>599. <br>
+You are designing a web application that stores static assets in an Amazon Simple Storage Service (S3) bucket. You expect this bucket to immediately receive over 150 PUT requests per second. What should you do to ensure optimal performance?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Use multi-part upload.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Add a random prefix to the key names.</div><div class="checklist-item"><input type="checkbox"> Amazon S3 will automatically manage performance at this scale.</div><div class="checklist-item"><input type="checkbox"> Use a predictable naming scheme, such as sequential numbers or date time sequences, in the key names</div></div>
+
+<p>600. <br>
+You have an application running on an Amazon Elastic Compute Cloud instance, that uploads 5 GB video objects to Amazon Simple Storage Service (S3). Video uploads are taking longer than expected, resulting in poor application performance. Which method will help improve performance of your application?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Enable enhanced networking</div><div class="checklist-item"><input type="checkbox" checked="checked"> Use Amazon S3 multipart upload</div><div class="checklist-item"><input type="checkbox"> Leveraging Amazon CloudFront, use the HTTP POST method to reduce latency.</div><div class="checklist-item"><input type="checkbox"> Use Amazon Elastic Block Store Provisioned IOPs and use an Amazon EBS-optimized instance</div></div>
+
+<p>601. <br>
+Which of the following methods gives you protection against accidental loss of data stored in Amazon S3? (Choose 2)</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Set bucket policies to restrict deletes, and also enable versioning</div><div class="checklist-item"><input type="checkbox"> By default, versioning is enabled on a new bucket so you don’t have to worry about it (Not enabled by default)</div><div class="checklist-item"><input type="checkbox"> Build a secondary index of your keys to protect the data (improves performance only)</div><div class="checklist-item"><input type="checkbox"> Back up your bucket to a bucket owned by another AWS account for redundancy</div></div>
+
+<p>602 <br>
+A startup company hired you to help them build a mobile application that will ultimately store billions of image and videos in Amazon S3. The company is lean on funding, and wants to minimize operational costs, however, they have an aggressive marketing plan, and expect to double their current installation base every six months. Due to the nature of their business, they are expecting sudden and large increases to traffic to and from S3, and need to ensure that it can handle the performance needs of their application. What other information must you gather from this customer in order to determine whether S3 is the right option?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> You must know how many customers that company has today, because this is critical in understanding what their customer base will be in two years. (No. of customers do not matter)</div><div class="checklist-item"><input type="checkbox" checked="checked"> You must find out total number of requests per second at peak usage.</div><div class="checklist-item"><input type="checkbox"> You must know the size of the individual objects being written to S3 in order to properly design the key namespace. (Size does not relate to the key namespace design but the count does)</div><div class="checklist-item"><input type="checkbox"> In order to build the key namespace correctly, you must understand the total amount of storage needs for each S3 bucket. (S3 provided unlimited storage the key namespace design would depend on the number)</div></div>
+
+<p>603. <br>
+A document storage company is deploying their application to AWS and changing their business model to support both free tier and premium tier users. The premium tier users will be allowed to store up to 200GB of data and free tier customers will be allowed to store only 5GB. The customer expects that billions of files will be stored. All users need to be alerted when approaching 75 percent quota utilization and again at 90 percent quota use. To support the free tier and premium tier users, how should they architect their application?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> The company should utilize an amazon simple workflow service activity worker that updates the users data counter in amazon dynamo DB. The activity worker will use simple email service to send an email if the counter increases above the appropriate thresholds.</div><div class="checklist-item"><input type="checkbox"> The company should deploy an amazon relational data base service relational database with a store objects table that has a row for each stored object along with size of each object. The upload server will query the aggregate consumption of the user in questions (by first determining the files store by the user, and then querying the stored objects table for respective file sizes) and send an email via Amazon Simple Email Service if the thresholds are breached. (Good Approach to use RDS but with so many objects might not be a good option)</div><div class="checklist-item"><input type="checkbox"> The company should write both the content length and the username of the files owner as S3 metadata for the object. They should then create a file watcher to iterate over each object and aggregate the size for each user and send a notification via Amazon Simple Queue Service to an emailing service if the storage threshold is exceeded. (List operations on S3 not feasible)</div><div class="checklist-item"><input type="checkbox"> The company should create two separated amazon simple storage service buckets one for data storage for free tier users and another for data storage for premium tier users. An amazon simple workflow service activity worker will query all objects for a given user based on the bucket the data is stored in and aggregate storage. The activity worker will notify the user via Amazon Simple Notification Service when necessary (List operations on S3 not feasible as well as SNS does not address email requirement)</div></div>
+
+<p>604. <br>
+Your company host a social media website for storing and sharing documents. the web application allow users to upload large files while resuming and pausing the upload as needed. Currently, files are uploaded to your php front end backed by Elastic Load Balancing and an autoscaling fleet of amazon elastic compute cloud (EC2) instances that scale upon average of bytes received (NetworkIn) After a file has been uploaded. it is copied to amazon simple storage service(S3). Amazon Ec2 instances use an AWS Identity and Access Management (AMI) role that allows Amazon s3 uploads. Over the last six months, your user base and scale have increased significantly, forcing you to increase the auto scaling groups Max parameter a few times. Your CFO is concerned about the rising costs and has asked you to adjust the architecture where needed to better optimize costs. Which architecture change could you introduce to reduce cost and still keep your web application secure and scalable?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Replace the Autoscaling launch Configuration to include c3.8xlarge instances; those instances can potentially yield a network throughput of 10gbps. (no info of current size and might increase cost)</div><div class="checklist-item"><input type="checkbox"> Re-architect your ingest pattern, have the app authenticate against your identity provider as a broker fetching temporary AWS credentials from AWS Secure token service (GetFederation Token). Securely pass the credentials and s3 endpoint/prefix to your app. Implement client-side logic to directly upload the file to amazon s3 using the given credentials and S3 Prefix. (will not provide the ability to handle pause and restarts)</div><div class="checklist-item"><input type="checkbox"> Re-architect your ingest pattern, and move your web application instances into a VPC public subnet. Attach a public IP address for each EC2 instance (using the auto scaling launch configuration settings). Use Amazon Route 53 round robin records set and http health check to DNS load balance the app request this approach will significantly reduce the cost by bypassing elastic load balancing. (ELB is not the bottleneck)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Re-architect your ingest pattern, have the app authenticate against your identity provider as a broker fetching temporary AWS credentials from AWS Secure token service (GetFederation Token). Securely pass the credentials and s3 endpoint/prefix to your app. Implement client-side logic that used the S3 multipart upload API to directly upload the file to Amazon s3 using the given credentials and s3 Prefix. (multipart allows one to start uploading directly to S3 before the actual size is known or complete data is downloaded)</div></div>
+
+<p>605. <br>
+If an application is storing hourly log files from thousands of instances from a high traffic web site, which naming scheme would give optimal performance on S3?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Sequential</div><div class="checklist-item"><input type="checkbox"> instanceID_log-HH-DD-MM-YYYY</div><div class="checklist-item"><input type="checkbox"> instanceID_log-YYYY-MM-DD-HH</div><div class="checklist-item"><input type="checkbox" checked="checked"> HH-DD-MM-YYYY-log_instanceID (HH will give some randomness to start with instead of instaneId where the first characters would be i-)</div><div class="checklist-item"><input type="checkbox"> YYYY-MM-DD-HH-log_instanceID</div></div>
+
+<p>606. <br>
+You are running a successful multi-tier web application on AWS and your marketing department has asked you to add a reporting tier to the application. The reporting tier will aggregate and publish status reports every 30 minutes from user-generated information that is being stored in your web applications database. You are currently running a Multi-AZ RDS MySQL instance for the database tier. You also have implemented ElastiCache as a database caching layer between the application tier and database tier. Please select the answer that will allow you to successfully implement the reporting tier with as little impact as possible to your database.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Continually send transaction logs from your master database to an S3 bucket and generate the reports off the S3 bucket using S3 byte range requests.</div><div class="checklist-item"><input type="checkbox"> Generate the reports by querying the synchronously replicated standby RDS MySQL instance maintained through Multi-AZ (Standby instance cannot be used as a scaling solution)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Launch a RDS Read Replica connected to your Multi-AZ master database and generate reports by querying the Read Replica.</div><div class="checklist-item"><input type="checkbox"> Generate the reports by querying the ElastiCache database caching tier. (ElasticCache does not maintain full data and is simply a caching solution)</div></div>
+
+<p>607. <br>
+A company is deploying a new two-tier web application in AWS. The company has limited staff and requires high availability, and the application requires complex queries and table joins. Which configuration provides the solution for the company’s requirements?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> MySQL Installed on two Amazon EC2 Instances in a single Availability Zone (does not provide High Availaility out of the box)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon RDS for MySQL with Multi-AZ</div><div class="checklist-item"><input type="checkbox"> Amazon ElastiCache (Just a caching solution)</div><div class="checklist-item"><input type="checkbox"> Amazon DynamoDB (Not suitable for complex queries and joins)</div></div>
+
+<p>608. <br>
+Your company is getting ready to do a major public announcement of a social media site on AWS. The website is running on EC2 instances deployed across multiple Availability Zones with a Multi-AZ RDS MySQL Extra Large DB Instance. The site performs a high number of small reads and writes per second and relies on an eventual consistency model. After comprehensive tests you discover that there is read contention on RDS MySQL. Which are the best approaches to meet these requirements? (Choose 2 answers)</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Deploy ElastiCache in-memory cache running in each availability zone</div><div class="checklist-item"><input type="checkbox"> Implement sharding to distribute load to multiple RDS MySQL instances (this is only a read contention, the writes work fine)</div><div class="checklist-item"><input type="checkbox"> Increase the RDS MySQL Instance size and Implement provisioned IOPS (not scalable, this is only a read contention, the writes work fine)</div><div class="checklist-item"><input type="checkbox" checked="checked"> Add an RDS MySQL read replica in each availability zone</div></div>
+
+<p>609. <br>
+Your company has HQ in Tokyo and branch offices all over the world and is using logistics software with a multi-regional deployment on AWS in Japan, Europe and US. The logistic software has a 3-tier architecture and currently uses MySQL 5.6 for data persistence. Each region has deployed its own database. In the HQ region you run an hourly batch process reading data from every region to compute cross-regional reports that are sent by email to all offices this batch process must be completed as fast as possible to quickly optimize logistics. How do you build the database architecture in order to meet the requirements?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> For each regional deployment, use RDS MySQL with a master in the region and a read replica in the HQ region</div><div class="checklist-item"><input type="checkbox"> For each regional deployment, use MySQL on EC2 with a master in the region and send hourly EBS snapshots to the HQ region</div><div class="checklist-item"><input type="checkbox"> For each regional deployment, use RDS MySQL with a master in the region and send hourly RDS snapshots to the HQ region</div><div class="checklist-item"><input type="checkbox"> For each regional deployment, use MySQL on EC2 with a master in the region and use S3 to copy data files hourly to the HQ region</div><div class="checklist-item"><input type="checkbox"> Use Direct Connect to connect all regional MySQL deployments to the HQ region and reduce network latency for the batch process</div></div>
+
+<p>610. <br>
+What would happen to an RDS (Relational Database Service) multi-Availability Zone deployment if the primary DB instance fails?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> IP of the primary DB Instance is switched to the standby DB Instance.</div><div class="checklist-item"><input type="checkbox"> A new DB instance is created in the standby availability zone.</div><div class="checklist-item"><input type="checkbox" checked="checked"> The canonical name record (CNAME) is changed from primary to standby.</div><div class="checklist-item"><input type="checkbox"> The RDS (Relational Database Service) DB instance reboots.</div></div>
+
+<p>611. <br>
+Your business is building a new application that will store its entire customer database on a RDS MySQL database, and will have various applications and users that will query that data for different purposes. Large analytics jobs on the database are likely to cause other applications to not be able to get the query results they need to, before time out. Also, as your data grows, these analytics jobs will start to take more time, increasing the negative effect on the other applications. How do you solve the contention issues between these different workloads on the same data?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Enable Multi-AZ mode on the RDS instance</div><div class="checklist-item"><input type="checkbox"> Use ElastiCache to offload the analytics job data</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create RDS Read-Replicas for the analytics work</div><div class="checklist-item"><input type="checkbox"> Run the RDS instance on the largest size possible</div></div>
+
+<p>612. <br>
+Will my standby RDS instance be in the same Availability Zone as my primary?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Only for Oracle RDS types</div><div class="checklist-item"><input type="checkbox"> Yes</div><div class="checklist-item"><input type="checkbox"> Only if configured at launch</div><div class="checklist-item"><input type="checkbox" checked="checked"> No</div></div>
+
+<p>613. <br>
+Is creating a Read Replica of another Read Replica supported?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Only in certain regions</div><div class="checklist-item"><input type="checkbox" checked="checked"> Only with MySQL based RDS</div><div class="checklist-item"><input type="checkbox"> Only for Oracle RDS types</div><div class="checklist-item"><input type="checkbox"> No</div></div>
+
+<p>614. <br>
+A user is planning to set up the Multi-AZ feature of RDS. Which of the below mentioned conditions won’t take advantage of the Multi-AZ feature?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Availability zone outage</div><div class="checklist-item"><input type="checkbox"> A manual failover of the DB instance using Reboot with failover option</div><div class="checklist-item"><input type="checkbox" checked="checked"> Region outage</div><div class="checklist-item"><input type="checkbox"> When the user changes the DB instance’s server type</div></div>
+
+<p>615. <br>
+When you run a DB Instance as a Multi-AZ deployment, the “<strong>_</strong>” serves database writes and reads</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> secondary</div><div class="checklist-item"><input type="checkbox"> backup</div><div class="checklist-item"><input type="checkbox"> stand by</div><div class="checklist-item"><input type="checkbox" checked="checked"> primary</div></div>
+
+<p>616. <br>
+When running my DB Instance as a Multi-AZ deployment, can I use the standby for read or write operations?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Yes</div><div class="checklist-item"><input type="checkbox"> Only with MSSQL based RDS</div><div class="checklist-item"><input type="checkbox"> Only for Oracle RDS instances</div><div class="checklist-item"><input type="checkbox" checked="checked"> No</div></div>
+
+<p>617. <br>
+Read Replicas require a transactional storage engine and are only supported for the <strong><em>___</em></strong> storage engine</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> OracleISAM</div><div class="checklist-item"><input type="checkbox"> MSSQLDB</div><div class="checklist-item"><input type="checkbox" checked="checked"> InnoDB</div><div class="checklist-item"><input type="checkbox"> MyISAM</div></div>
+
+<p>618. <br>
+A user is configuring the Multi-AZ feature of an RDS DB. The user came to know that this RDS DB does not use the AWS technology, but uses server mirroring to achieve replication. Which DB is the user using right now?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> MySQL</div><div class="checklist-item"><input type="checkbox"> Oracle</div><div class="checklist-item"><input type="checkbox" checked="checked"> MS SQL</div><div class="checklist-item"><input type="checkbox"> PostgreSQL</div></div>
+
+<p>619. <br>
+If I have multiple Read Replicas for my master DB Instance and I promote one of them, what happens to the rest of the Read Replicas?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> The remaining Read Replicas will still replicate from the older master DB Instance</div><div class="checklist-item"><input type="checkbox"> The remaining Read Replicas will be deleted</div><div class="checklist-item"><input type="checkbox"> The remaining Read Replicas will be combined to one read replica</div></div>
+
+<p>620. <br>
+If you have chosen Multi-AZ deployment, in the event of a planned or unplanned outage of your primary DB Instance, Amazon RDS automatically switches to the standby replica. The automatic failover mechanism simply changes the <strong>__</strong> record of the main DB Instance to point to the standby DB Instance.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> DNAME</div><div class="checklist-item"><input type="checkbox" checked="checked"> CNAME</div><div class="checklist-item"><input type="checkbox"> TXT</div><div class="checklist-item"><input type="checkbox"> MX</div></div>
+
+<p>621. <br>
+When automatic failover occurs, Amazon RDS will emit a DB Instance event to inform you that automatic failover occurred. You can use the <strong>_</strong> to return information about events related to your DB Instance</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> FetchFailure</div><div class="checklist-item"><input type="checkbox"> DescriveFailure</div><div class="checklist-item"><input type="checkbox" checked="checked"> DescribeEvents</div><div class="checklist-item"><input type="checkbox"> FetchEvents</div></div>
+
+<p>622. <br>
+The new DB Instance that is created when you promote a Read Replica retains the backup window period.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> TRUE</div><div class="checklist-item"><input type="checkbox"> FALSE</div></div>
+
+<p>623. <br>
+Will I be alerted when automatic failover occurs?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> Only if SNS configured</div><div class="checklist-item"><input type="checkbox"> No</div><div class="checklist-item"><input type="checkbox"> Yes</div><div class="checklist-item"><input type="checkbox"> Only if Cloudwatch configured</div></div>
+
+<p>624. <br>
+Can I initiate a “forced failover” for my MySQL Multi-AZ DB Instance deployment?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Only in certain regions</div><div class="checklist-item"><input type="checkbox"> Only in VPC</div><div class="checklist-item"><input type="checkbox" checked="checked"> Yes</div><div class="checklist-item"><input type="checkbox"> No</div></div>
+
+<p>625. <br>
+A user is accessing RDS from an application. The user has enabled the Multi-AZ feature with the MS SQL RDS DB. During a planned outage how will AWS ensure that a switch from DB to a standby replica will not affect access to the application?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> RDS will have an internal IP which will redirect all requests to the new DB</div><div class="checklist-item"><input type="checkbox" checked="checked"> RDS uses DNS to switch over to standby replica for seamless transition</div><div class="checklist-item"><input type="checkbox"> The switch over changes Hardware so RDS does not need to worry about access</div><div class="checklist-item"><input type="checkbox"> RDS will have both the DBs running independently and the user has to manually switch over</div></div>
+
+<p>626. <br>
+Which of the following is part of the failover process for a Multi-AZ Amazon Relational Database Service (RDS) instance?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> The failed RDS DB instance reboots.</div><div class="checklist-item"><input type="checkbox"> The IP of the primary DB instance is switched to the standby DB instance.</div><div class="checklist-item"><input type="checkbox" checked="checked"> The DNS record for the RDS endpoint is changed from primary to standby.</div><div class="checklist-item"><input type="checkbox"> A new DB instance is created in the standby availability zone.</div></div>
+
+<p>627. <br>
+Which of these is not a reason a Multi-AZ RDS instance will failover?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> An Availability Zone outage</div><div class="checklist-item"><input type="checkbox"> A manual failover of the DB instance was initiated using Reboot with failover</div><div class="checklist-item"><input type="checkbox" checked="checked"> To autoscale to a higher instance class (Refer link)</div><div class="checklist-item"><input type="checkbox"> The primary DB instance fails</div></div>
+
+<p>628. <br>
+You need to scale an RDS deployment. You are operating at 10% writes and 90% reads, based on your logging. How best can you scale this in a simple way?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Create a second master RDS instance and peer the RDS groups.</div><div class="checklist-item"><input type="checkbox"> Cache all the database responses on the read side with CloudFront.</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create read replicas for RDS since the load is mostly reads.</div><div class="checklist-item"><input type="checkbox"> Create a Multi-AZ RDS installs and route read traffic to standby.</div></div>
+
+<p>629. <br>
+How does Amazon RDS multi Availability Zone model work?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> A second, standby database is deployed and maintained in a different availability zone from master, using synchronous replication. (Refer link)</div><div class="checklist-item"><input type="checkbox"> A second, standby database is deployed and maintained in a different availability zone from master using asynchronous replication.</div><div class="checklist-item"><input type="checkbox"> A second, standby database is deployed and maintained in a different region from master using asynchronous replication.</div><div class="checklist-item"><input type="checkbox"> A second, standby database is deployed and maintained in a different region from master using synchronous replication.</div></div>
+
+<p>630. <br>
+A customer is running an application in US-West (Northern California) region and wants to setup disaster recovery failover to the Asian Pacific (Singapore) region. The customer is interested in achieving a low Recovery Point Objective (RPO) for an Amazon RDS multi-AZ MySQL database instance. Which approach is best suited to this need?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Synchronous replication</div><div class="checklist-item"><input type="checkbox" checked="checked"> Asynchronous replication</div><div class="checklist-item"><input type="checkbox"> Route53 health checks</div><div class="checklist-item"><input type="checkbox"> Copying of RDS incremental snapshots</div></div>
+
+<p>631. <br>
+A user is using a small MySQL RDS DB. The user is experiencing high latency due to the Multi AZ feature. Which of the below mentioned options may not help the user in this situation?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Schedule the automated back up in non-working hours</div><div class="checklist-item"><input type="checkbox"> Use a large or higher size instance</div><div class="checklist-item"><input type="checkbox"> Use PIOPS</div><div class="checklist-item"><input type="checkbox" checked="checked"> Take a snapshot from standby Replica</div></div>
+
+<p>632. <br>
+Are Reserved Instances available for Multi-AZ Deployments?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Only for Cluster Compute instances</div><div class="checklist-item"><input type="checkbox" checked="checked"> Yes for all instance types</div><div class="checklist-item"><input type="checkbox"> Only for M3 instance types</div></div>
+
+<p>633. <br>
+My Read Replica appears “stuck” after a Multi-AZ failover and is unable to obtain or apply updates from the source DB Instance. What do I do?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> You will need to delete the Read Replica and create a new one to replace it.</div><div class="checklist-item"><input type="checkbox"> You will need to disassociate the DB Engine and re associate it.</div><div class="checklist-item"><input type="checkbox"> The instance should be deployed to Single AZ and then moved to Multi- AZ once again</div><div class="checklist-item"><input type="checkbox"> You will need to delete the DB Instance and create a new one to replace it.</div></div>
+
+<p>634. <br>
+What is the charge for the data transfer incurred in replicating data between your primary and standby?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> No charge. It is free.</div><div class="checklist-item"><input type="checkbox"> Double the standard data transfer charge</div><div class="checklist-item"><input type="checkbox"> Same as the standard data transfer charge</div><div class="checklist-item"><input type="checkbox"> Half of the standard data transfer charge</div></div>
+
+<p>635. <br>
+A user has enabled the Multi AZ feature with the MS SQL RDS database server. Which of the below mentioned statements will help the user understand the Multi AZ feature better?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> In a Multi AZ, AWS runs two DBs in parallel and copies the data asynchronously to the replica copy</div><div class="checklist-item"><input type="checkbox"> In a Multi AZ, AWS runs two DBs in parallel and copies the data synchronously to the replica copy</div><div class="checklist-item"><input type="checkbox" checked="checked"> In a Multi AZ, AWS runs just one DB but copies the data synchronously to the standby replica</div><div class="checklist-item"><input type="checkbox"> AWS MS SQL does not support the Multi AZ feature</div></div>
+
+<p>636. <br>
+A company is running a batch analysis every hour on their main transactional DB running on an RDS MySQL instance to populate their central Data Warehouse running on Redshift. During the execution of the batch their transactional applications are very slow. When the batch completes they need to update the top management dashboard with the new data. The dashboard is produced by another system running on-premises that is currently started when a manually-sent email notifies that an update is required The on-premises system cannot be modified because is managed by another team. How would you optimize this scenario to solve performance issues and automate the process as much as possible?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Replace RDS with Redshift for the batch analysis and SNS to notify the on-premises system to update the dashboard</div><div class="checklist-item"><input type="checkbox"> Replace RDS with Redshift for the batch analysis and SQS to send a message to the on-premises system to update the dashboard</div><div class="checklist-item"><input type="checkbox" checked="checked"> Create an RDS Read Replica for the batch analysis and SNS to notify me on-premises system to update the dashboard</div><div class="checklist-item"><input type="checkbox"> Create an RDS Read Replica for the batch analysis and SQS to send a message to the on-premises system to update the dashboard.</div></div>
+
+<p>637. <br>
+When should I choose Provisioned IOPS over Standard RDS storage?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> If you have batch-oriented workloads</div><div class="checklist-item"><input type="checkbox" checked="checked"> If you use production online transaction processing (OLTP) workloads</div><div class="checklist-item"><input type="checkbox"> If you have workloads that are not sensitive to consistent performance</div></div>
+
+<p>638. <br>
+Is decreasing the storage size of a DB Instance permitted?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Depends on the RDMS used</div><div class="checklist-item"><input type="checkbox"> Yes</div><div class="checklist-item"><input type="checkbox" checked="checked"> No</div></div>
+
+<p>639. <br>
+Because of the extensibility limitations of striped storage attached to Windows Server, Amazon RDS does not currently support increasing storage on a <strong>_</strong> DB Instance.</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox" checked="checked"> SQL Server</div><div class="checklist-item"><input type="checkbox"> MySQL</div><div class="checklist-item"><input type="checkbox"> Oracle</div></div>
+
+<p>640. <br>
+If I want to run a database in an Amazon instance, which is the most recommended Amazon storage option?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> Amazon Instance Storage</div><div class="checklist-item"><input type="checkbox" checked="checked"> Amazon EBS</div><div class="checklist-item"><input type="checkbox"> You can’t run a database inside an Amazon instance.</div><div class="checklist-item"><input type="checkbox"> Amazon S3</div></div>
+
+<p>641. <br>
+For each DB Instance class, what is the maximum size of associated storage capacity?</p>
+
+<div class="checklist"><div class="checklist-item"><input type="checkbox"> 1TB</div><div class="checklist-item"><input type="checkbox"> 2TB</div><div class="checklist-item"><input type="checkbox"> 500GB</div><div class="checklist-item"><input type="checkbox" checked="checked"> 6TB (Except SQL Server which is currently 4TB)</div></div></div></body></html>
