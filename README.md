@@ -2,6 +2,8 @@
 ## 个人博客网站
 http://blog.sunruyi.com
 
+## 安装node,npm
+sudo yum install nodejs npm --enablerepo=epel
 ## 下载node module
 sudo npm install
 ## 启动本地服务，进行文章预览调试，命令：
