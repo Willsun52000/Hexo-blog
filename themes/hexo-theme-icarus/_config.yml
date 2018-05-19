@@ -13,7 +13,7 @@ customize:
         url: images/logo.png
     profile:
         enabled: true # Whether to show profile bar
-        avatar: https://s3-ap-southeast-1.amazonaws.com/willfilebucket/hexo-blog/avatar.png
+        avatar: css/images/avatar.png
         gravatar: # Gravatar email address, if you enable Gravatar, your avatar config will be overriden
         author: 孙如意
         author_title: 金融领域系统架构和开发，做过传统J2EE，SOA，分布式系统，熟悉前端，后端，中间件，数据库，目标全栈加架构。懂互联网，愿意交流与分享。

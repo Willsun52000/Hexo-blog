@@ -160,7 +160,7 @@ $ jar tvf target/myproject-0.0.1-SNAPSHOT.jar
 13. 正常情况下，遍历执行SpringApplicationRunListener的finished()方法、（如果整个过程出现异常，则依然调用所有SpringApplicationRunListener的finished()方法，只不过这种情况下会将异常信息一并传入处理）
 
 **去除事件通知点后，整个流程如下：**
-![enter image description here](http://i4.buimg.com/589792/cd46c81f932762e6.jpg)
+![enter image description here](https://shushiinfo-1251883896.cos.ap-beijing.myqcloud.com/hexo-blog/images/startup.png)
 
 总之，我们可以认为整个的Spring Boot应用的运行主要包括两个阶段：
 1. 以`main`方法为入口，进行自动配置初始化。
